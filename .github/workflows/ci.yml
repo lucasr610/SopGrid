@@ -1,0 +1,152 @@
+name: SOPGRID CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  security-audit:
+    name: Security & Dependency Audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Security audit
+        run: npm audit --audit-level moderate
+        
+      - name: Check for known vulnerabilities
+        run: npm audit --audit-level high --production
+
+  code-quality:
+    name: Code Quality & Static Analysis
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: TypeScript type checking
+        run: npx tsc --noEmit
+        
+      - name: ESLint
+        run: npx eslint . --ext ts,tsx --max-warnings 0
+        
+      - name: Prettier format check
+        run: npx prettier --check .
+        
+      - name: Check for secrets
+        uses: trufflesecurity/trufflehog@v3.63.2
+        with:
+          path: ./
+          base: main
+          head: HEAD
+
+  unit-tests:
+    name: Unit & Component Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run unit tests with coverage
+        run: npx vitest run --coverage
+        
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        if: github.event_name == 'push'
+        with:
+          directory: ./coverage
+          fail_ci_if_error: true
+
+  build-test:
+    name: Build & Integration Test
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: test_password
+          POSTGRES_USER: test_user
+          POSTGRES_DB: test_db
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+          
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build application
+        run: npm run build
+        
+      - name: Test database migrations
+        env:
+          DATABASE_URL: postgresql://test_user:test_password@localhost:5432/test_db
+        run: |
+          npx drizzle-kit push
+          
+      - name: Start application for health check
+        env:
+          DATABASE_URL: postgresql://test_user:test_password@localhost:5432/test_db
+          NODE_ENV: test
+        run: |
+          timeout 30s npm start &
+          sleep 10
+          curl -f http://localhost:5000/api/system/metrics || exit 1
+
+  release-gates:
+    name: Release Gate Validation
+    runs-on: ubuntu-latest
+    needs: [security-audit, code-quality, unit-tests, build-test]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+        
+      - name: Validate release criteria
+        run: |
+          echo "✅ Security audit passed"
+          echo "✅ Code quality checks passed" 
+          echo "✅ Unit tests passed with coverage"
+          echo "✅ Build and integration tests passed"
+          echo "🚀 Ready for deployment"

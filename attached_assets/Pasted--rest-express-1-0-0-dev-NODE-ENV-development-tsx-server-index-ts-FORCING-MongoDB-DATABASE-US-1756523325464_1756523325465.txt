@@ -1,0 +1,146 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+🔧 FORCING MongoDB DATABASE USAGE
+🔗 Enhanced Evidence Ledger initialized with blockchain integrity
+🎓 AR Training System initialized with 4 core modules
+🌍 Multi-jurisdiction support initialized with 4 jurisdictions
+🔐 RBAC Security initialized with 5 role levels
+🔧 Ollama configured for YOUR LOCAL MODELS:
+   📦 Small (7B):  mistral:7b
+   📦 Large (14B): llama2:14b
+   🌐 Base URL:    http://localhost:11434
+⚡ To use your models, make sure Ollama is running with your specific models!
+☁️ AI Router: CLOUD MODE - Using OpenAI, Gemini, Anthropic as primary processors
+🚀 UNIFIED SOPGRID: Initializing complete system integration...
+🗄️ PostgreSQL: Connected and ready for unified operations
+🔐 CREDENTIALS: LLM API keys loaded successfully
+🔗 STORAGE: Connecting to all storage systems...
+🍃 MongoDB: Connected for document storage
+🔍 Qdrant: Connected for vector search
+🤖 AGENTS: Initializing specialized agent network...
+⚡ Fast startup mode enabled
+🔧 Configuration: COMPLIANCE_STRICT=false, NLI_REQUIRED=false
+🛡️ Applying Safety & Logic validation to critical endpoints
+🔐 Applying role-based access control to sensitive routes
+🚀 UNIFIED SOPGRID: Initializing complete system integration...
+✅ UNIFIED SOPGRID: All agents and storage systems integrated
+🤖 Agents: 0 | Storage: PostgreSQL=true
+🔧 Starting Enhanced OS Agent for autonomous system management...
+👁️ Eyes system registered rotor: rotor-sop_generation-1756522981749-f8n2mxou6
+🆕 New rotor spawned: rotor-sop_generation-1756522981749-f8n2mxou6 with AI services: openai, gemini
+👁️ Eyes system registered rotor: rotor-compliance_check-1756522981750-xjz7tk8v2
+🆕 New rotor spawned: rotor-compliance_check-1756522981750-xjz7tk8v2 with AI services: anthropic, gemini
+👁️ Eyes system registered rotor: rotor-document_analysis-1756522981750-098jlrxpf
+🆕 New rotor spawned: rotor-document_analysis-1756522981750-098jlrxpf with AI services: openai, gemini, anthropic
+👁️ Eyes system registered rotor: rotor-troubleshooting-1756522981750-j5trf4289
+🆕 New rotor spawned: rotor-troubleshooting-1756522981750-j5trf4289 with AI services: openai, gemini
+⚡ Mesh Rotor System initialized with 4 base rotors (fast startup)
+🗄️ OS Agent: Database connection ready for memory offloading
+🤖 Enhanced OS Agent initialized - Monitoring disabled
+🤖 Enhanced OS Agent activated - Autonomous system resource management enabled
+📚 Loading manufacturer manual knowledge into validators...
+📚 Loading manual knowledge into validators...
+  Adding sequence: bearing_repack
+  Adding torque spec: Castle nut initial = 50 ft-lbs
+  Adding torque spec: Castle nut final = 10-15 in-lbs
+  Adding torque spec: Lug nuts = 90-120 ft-lbs
+  Adding torque spec: U-bolts = 65-85 ft-lbs
+  Adding sequence: brake_adjustment
+  Adding torque spec: Brake mounting bolts = 20-25 ft-lbs
+  Adding sequence: wet_bolt_replacement
+  Adding torque spec: Wet bolt nut = 40-50 ft-lbs
+  Adding sequence: filter_cleaning
+✅ Manual knowledge loaded into validators
+✅ Manual knowledge loaded - Lippert, Dometic, and other manufacturer specs ready
+📚 Document processing available on-demand
+✅ Background: Document processing will occur on-demand only
+🚀 Auto-SOP Generator initialized with bulk processing
+🤖 Auto-SOP Generator initialized with bulk processing and revision monitoring
+⚖️ Agent Load Balancer initialized with adaptive strategies
+🤖 Technician LLM Chat Interface activated at /api/technician
+3:03:01 AM [express] serving on port 5000
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✅ MongoDB connected successfully
+🗄️ MongoDB storage activated - FORCED
+🚨 Failed to register agents in database: TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'instance' -> object with constructor 'UnifiedSystemOrchestrator'
+    |     property 'agents' -> object with constructor 'Object'
+    |     property 'rotor' -> object with constructor 'Object'
+    --- property 'config' closes the circle
+    at JSON.stringify (<anonymous>)
+    at PgJsonb.mapToDriverValue (/home/runner/workspace/node_modules/src/pg-core/columns/jsonb.ts:43:15)
+    at <anonymous> (/home/runner/workspace/node_modules/src/sql/sql.ts:223:69)
+    at Array.map (<anonymous>)
+    at SQL.buildQueryFromSourceParams (/home/runner/workspace/node_modules/src/sql/sql.ts:148:30)
+    at <anonymous> (/home/runner/workspace/node_modules/src/sql/sql.ts:170:17)
+    at Array.map (<anonymous>)
+    at SQL.buildQueryFromSourceParams (/home/runner/workspace/node_modules/src/sql/sql.ts:148:30)
+    at <anonymous> (/home/runner/workspace/node_modules/src/sql/sql.ts:174:17)
+    at Array.map (<anonymous>)
+    at SQL.buildQueryFromSourceParams (/home/runner/workspace/node_modules/src/sql/sql.ts:148:30)
+    at <anonymous> (/home/runner/workspace/node_modules/src/sql/sql.ts:124:23)
+    at Object.startActiveSpan (/home/runner/workspace/node_modules/src/tracing.ts:27:11)
+    at SQL.toQuery (/home/runner/workspace/node_modules/src/sql/sql.ts:123:17)
+    at PgDialect.sqlToQuery (/home/runner/workspace/node_modules/src/pg-core/dialect.ts:591:14)
+    at <anonymous> (/home/runner/workspace/node_modules/src/pg-core/query-builders/insert.ts:405:19)
+    at Object.startActiveSpan (/home/runner/workspace/node_modules/src/tracing.ts:27:11)
+    at QueryPromise._prepare (/home/runner/workspace/node_modules/src/pg-core/query-builders/insert.ts:400:17)
+    at <anonymous> (/home/runner/workspace/node_modules/src/pg-core/query-builders/insert.ts:422:16)
+    at Object.startActiveSpan (/home/runner/workspace/node_modules/src/tracing.ts:27:11)
+    at QueryPromise.execute (/home/runner/workspace/node_modules/src/pg-core/query-builders/insert.ts:421:17)
+    at QueryPromise.then (/home/runner/workspace/node_modules/src/query-promise.ts:31:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+✅ AGENTS: All specialized agents initialized and coordinated
+👀 MONITORING: Intelligent monitoring - only on-demand to prevent database bloat
+✅ UNIFIED SOPGRID: System fully integrated and operational
+3:03:05 AM [express] GET /api/auth/user 304 in 1ms :: {"id":"1756341735989","username":"Lucas.Reynol…
+3:04:26 AM [express] GET /api/credentials 200 in 323ms :: [{"id":"1","name":"OpenAI API Key","type":…
+3:06:24 AM [express] GET /api/auth/user 304 in 1ms :: {"id":"1756341735989","username":"Lucas.Reynol…
+💬 Chat request from 1756341735989 (super_admin): replace 12V ceiling light
+📎 With 0 attachments
+🤖 Technician LLM detected intent: {
+  type: 'knowledge_query',
+  entities: {
+    equipment: 'ceiling light',
+    manufacturer: '',
+    model: '12V',
+    action: 'replace'
+  }
+}
+🔍 Searching for: "replace 12V ceiling light" in namespace: 5
+✅ Found 0 vector search results
+💬 Chat interaction logged: {
+  action: 'chat_interaction',
+  userId: '1756341735989',
+  role: 'super_admin',
+  message: 'replace 12V ceiling light...',
+  timestamp: 2025-08-30T03:07:08.756Z
+}
+3:07:08 AM [express] POST /api/technician/chat 200 in 1557ms :: {"message":"I don't have specific in…
+💬 Chat request from 1756341735989 (super_admin): lippert electric motor repalcment 
+📎 With 0 attachments
+🤖 Technician LLM detected intent: {
+  type: 'knowledge_query',
+  entities: {
+    equipment: 'electric motor',
+    manufacturer: 'Lippert',
+    model: '',
+    action: 'replacement'
+  }
+}
+🔍 Searching for: "lippert electric motor repalcment " in namespace: 5
+✅ Found 0 vector search results
+💬 Chat interaction logged: {
+  action: 'chat_interaction',
+  userId: '1756341735989',
+  role: 'super_admin',
+  message: 'lippert electric motor repalcment ...',
+  timestamp: 2025-08-30T03:07:58.695Z
+}
+3:07:58 AM [express] POST /api/technician/chat 200 in 2720ms :: {"message":"I don't have specific in…
+📚 Processing 0 ingested documents for auto-SOP generation

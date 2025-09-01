@@ -1,0 +1,63 @@
+ Clean rags
+- Safety glasses and gloves
+
+#### Step-by-Step Procedure:
+
+1. **Safety First:**
+   - Park the RV on a level surface and chock the wheels.
+   - Wear safety glasses and gloves to protect yourself from debris and grease.
+
+2. **Lift the RV:**
+   - Use a jack to lift the RV and secure it with jack stands. Ensure the RV is stable before proceeding.
+
+3. **Remove the Wheel:**
+   - Use a lug wrench to remove the lug nuts and take off the wheel.
+
+4. **Remove the Hub Assembly:**
+   - Remove the dust cap from the hub.
+   - Straighten and remove the cotter pin from the spindle nut.
+   - Unscrew the spindle nut and remove the washer.
+   - Carefully slide the hub off the spindle, supporting it to prevent damage to the bearings.
+
+5. **Inspect Bearings and Races:**
+   - Clean the bearings and races with a solvent and inspect them for wear or damage. Replace if necessary.
+
+6. **Pack the Bearings:**
+   - Use a bearing packer or manually pack the bearings with high-quality wheel bearing grease. Ensure grease is thoroughly worked into the bearings.
+
+7. **Install New Grease Seals:**
+   - Remove the old grease seal from the hub and install a new one to prevent contamination.
+
+8. **Reassemble the Hub:**
+   - Place the inner bearing into the hub and install the new grease seal.
+   - Slide the hub back onto the spindle.
+   - Insert the outer bearing, washer, and spindle nut.
+
+9. **Adjust Bearing Preload:**
+   - Tighten the spindle nut while rotating the hub to seat the bearings.
+   - Loosen the nut slightly, then tighten it by hand until snug.
+   - Back off the nut to the nearest slot and insert a new cotter pin.
+
+10. **Reinstall the Wheel:**
+    - Place the wheel back onto the hub and hand-tighten the lug nuts.
+    - Lower the RV and torque the lug nuts to the manufacturer's specifications (typically around 90-120 ft-lbs, but consult your manual).
+
+11. **Final Checks:**
+    - Spin the wheel to ensure it rotates freely without excessive play.
+    - Reinstall the dust cap.
+
+### Torque Specifications:
+- **Spindle Nut:** Typically hand-tightened and then backed off slightly to allow for proper bearing preload.
+- **Lug Nuts:** Generally torqued to 90-120 ft-lbs, but always verify with the specific manual for your axle.
+
+### Safety Warnings:
+- Always use jack stands; never rely solely on a jack.
+- Ensure the RV is on a stable surface to prevent accidents.
+- Use new cotter pins and grease seals to ensure reliability.
+
+### Common Issues and Solutions:
+- **Bearing Noise:** Often caused by inadequate lubrication or worn bearings. Repack or replace bearings as needed.
+- **Excessive Play:** May indicate improper bearing preload. Adjust the spindle nut according to specifications.
+- **Grease Leakage:** Typically due to a damaged grease seal. Replace seals during each service.
+
+If you need specific part numbers or additional details, I recommend contacting Lippert directly or consulting the axle's service manual. Always ensure you have the correct parts and specifications for your specific axle model.

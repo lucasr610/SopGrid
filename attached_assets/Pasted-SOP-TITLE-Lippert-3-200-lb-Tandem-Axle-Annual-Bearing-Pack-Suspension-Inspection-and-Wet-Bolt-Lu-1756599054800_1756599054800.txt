@@ -1,0 +1,201 @@
+SOP_TITLE: Lippert 3,200 lb Tandem Axle: Annual Bearing Pack, Suspension Inspection, and Wet Bolt Lubrication
+ 
+SOP_ID: AXLE-MAINT-LCI-TANDEM-3K2-001
+DATE_CREATED: 2025-08-26
+LAST_REVISION_DATE: 2025-08-26
+VERSION: 1.0
+ 
+PURPOSE_DETAILS: This SOP details the procedure for performing the annual maintenance on a Lippert Components tandem axle system with a 3,200 lb rating, featuring leaf springs and wet bolts. The procedure includes a full wheel bearing inspection and repack, and the inspection and lubrication of the suspension components. The primary objective is to ensure optimal performance, extend the life of the axle and suspension components, prevent catastrophic failure from lack of lubrication, and maintain the safety of the RV for road travel.
+ 
+SCOPE_DETAILS: This procedure applies to all RV Service Center technicians and is specific to Lippert tandem axle systems with a 3,200 lb capacity that are equipped with leaf spring suspension and wet bolts (greaseable shackle bolts). This procedure covers all four wheel hubs and their associated suspension components on the trailer.
+ 
+SAFETY_SPECIAL_NOTES:
+
+FALL HAZARD: Working under a vehicle without proper support can result in severe injury or death. CORRECTION: MUST use jack stands rated for the vehicle's weight and ensure the RV is secured and chocked before commencing any work. The vehicle MUST NOT be supported by a jack alone.
+
+ELECTRICAL HAZARD: The trailer may be equipped with electric brakes. Live electrical circuits can cause severe shock or death. CORRECTION: MUST disconnect all power sources, including the battery and shore power, from the trailer. Perform LOTO (Lock Out/Tag Out) and verify zero energy before beginning any work on or near the electrical brake components.
+
+PINCH/CRUSH HAZARD: Moving suspension parts and wheels can cause severe injury. CORRECTION: ALWAYS ensure the RV is stable and chocked, and NEVER place hands or body parts in a position where they could be crushed by a sudden shift of the vehicle.
+
+FIRE/HEALTH HAZARD: Cleaning solvents and lubricants can be flammable or harmful if ingested or inhaled. CORRECTION: Work in a well-ventilated area. Wear appropriate PPE, including nitrile gloves and safety glasses. Have a fire extinguisher readily available.
+
+COMPONENT FAILURE HAZARD: Failure to properly torque lug nuts can result in the wheel falling off, causing a catastrophic failure and potential collision. CORRECTION: ALWAYS torque all lug nuts to the manufacturer's specified value in the correct pattern using a calibrated torque wrench.
+ 
+MATERIALS_LIST:
+
+New Grease Seals (qty. 4, Lippert PN may vary by hub)
+
+Wheel Bearing Grease (NLGI GC-LB rated, high-temp lithium complex grease)
+
+Clean, lint-free shop rags
+
+Brake cleaner or suitable solvent
+
+New Cotter Pins (qty. 4, replace each time the spindle nut is removed)
+
+New Spindle Washer (if damaged)
+
+New Wheel Bearings and Races (if inspection reveals wear or damage)
+ 
+TOOLS_LIST:
+
+Hydraulic floor jack (rated for RV weight)
+
+Jack stands (rated for RV weight)
+
+Wheel chocks
+
+Torque wrench (capable of lug nut and spindle nut torque specifications)
+
+Socket set (to fit lug nuts and spindle nut)
+
+Needle-nose pliers
+
+Flathead screwdriver or dust cap removal tool
+
+Seal puller tool
+
+Bearing packer tool (recommended) or hand-packing cone
+
+Brass drift punch and hammer (for bearing race removal/installation)
+
+Grease gun
+
+Shop light or headlamp
+
+Clean container for old grease and parts
+ 
+PROCEDURE_SECTION_A_TITLE: RV Preparation & Component Access
+PROCEDURE_SECTION_A_STEPS:
+
+Verify the RV is parked on a level, hard, and stable surface.
+
+Engage the RV's parking brake and chock the wheels on the opposite side of the RV that is being worked on. (PTC)
+
+Disconnect all electrical power, including the 12V DC battery and any shore power connection. Follow LOTO procedures.
+
+Using the floor jack, lift the RV by the frame, NOT the axle, until the wheels on one side are clear of the ground.
+
+Immediately place properly rated jack stands under the RV frame in a secure location and lower the RV onto the stands. DO NOT WORK UNDER AN RV SUPPORTED ONLY BY A JACK.
+
+Remove the decorative hubcap and/or lug nut covers. Using the correct size socket, loosen the lug nuts on both wheels on that side.
+
+Remove the lug nuts completely and take the wheels off the hub assembly. Place the wheels in a safe location away from the work area.
+ 
+PROCEDURE_SECTION_B_TITLE: Hub/Drum Removal & Bearing Inspection
+PROCEDURE_SECTION_B_STEPS:
+
+Carefully pry the grease/dust cap off the hub using a flathead screwdriver or dust cap removal tool. Work evenly around the edge to avoid damage.
+
+Clean off any excess grease from the end of the spindle and hub.
+
+Using needle-nose pliers, straighten the cotter pin and remove it from the spindle nut. Discard the old cotter pin.
+
+Remove the castle nut (spindle nut) and the washer from the spindle. Set them aside in a clean container.
+
+Carefully pull the brake drum/hub assembly off the spindle. Be prepared for the outer bearing to fall out as the hub is removed.
+
+Place the hub on a clean work surface. Use a seal puller to remove the inner grease seal. Discard the old seal as it must be replaced.
+
+Remove the inner bearing from the hub and place both bearings (inner and outer) in a container with a suitable solvent (e.g., brake cleaner) to clean all old grease.
+
+Thoroughly clean the inside of the hub and the spindle with a lint-free rag and brake cleaner. Ensure all old grease and debris are removed.
+
+Inspect the spindle for any signs of pitting, wear, or damage. Pay close attention to the areas where the bearings ride.
+
+Inspect the brake shoes and magnet for wear or damage. If brake shoes have grease or oil on them, they must be replaced, and the source of the leak (seal) must be addressed.
+
+Inspect the inner and outer bearing cups (races) inside the hub. Look for any scoring, pitting, or discoloration. If any wear is present, the races and bearings MUST be replaced as a set. (PC)
+
+Inspect the bearings themselves. Look for any signs of pitting, spalling (flaking of metal), or excessive wear on the rollers or cage. If any of these conditions are present, the bearings and races MUST be replaced.
+ 
+PROCEDURE_SECTION_C_TITLE: Repacking Bearings & Hub Reinstallation
+PROCEDURE_SECTION_C_STEPS:
+
+If the races were replaced, ensure the new races are fully and properly seated in the hub using a brass drift punch or race driver tool.
+
+Using a bearing packer tool, or by hand, fully pack the inner and outer bearings with new NLGI GC-LB rated grease until the grease is forced out through all sides of the bearing rollers.
+
+Apply a light coat of grease to the bearing races inside the hub.
+
+Place the freshly packed inner bearing back into the hub.
+
+Install a NEW grease seal into the hub, ensuring it is seated flush and not cocked. Use a seal driver or a block of wood to gently tap it in evenly.
+
+Carefully slide the hub assembly back onto the spindle. Take care not to damage the new seal on the spindle.
+
+Place the freshly packed outer bearing onto the spindle, followed by the washer and the castle nut.
+
+Tighten the castle nut to manufacturer specification while slowly rotating the hub to seat the bearings. This preloads the bearings and removes play. Do not overtighten. For 3,200 lb axles, this is typically 20-25 ft-lbs.
+
+Back off the castle nut one-quarter to one-half turn until the wheel spins freely with minimal end play (side-to-side movement).
+
+Install a NEW cotter pin through the castle nut and spindle hole to secure the nut. Bend the ends of the cotter pin to lock it in place.
+
+Reinstall the grease/dust cap.
+ 
+PROCEDURE_SECTION_D_TITLE: Suspension Inspection & Lubrication
+PROCEDURE_SECTION_D_STEPS:
+
+Visually inspect all suspension components on the side of the RV you are working on. This includes the leaf springs, equalizers, shackles, wet bolts, and U-bolts.
+
+Check for any signs of abnormal wear, cracking, or damage to the components.
+
+Using the grease gun, attach the nozzle to each grease zerk on the wet bolts (at the equalizer and spring shackles).
+
+Pump new grease into each zerk. While pumping, visually inspect the area around the bushing and bolt for grease to expel from both ends of the bushing. If no grease is expelled, rotate the wheel hub to relieve pressure and try again.
+
+If grease still does not expel, the zerk may be clogged or damaged, or the bushing may be dry-seized. The bolt and bushing may need to be replaced.
+
+Wipe off all excess grease from the suspension components.
+ 
+PROCEDURE_SECTION_E_TITLE: Final Assembly & Torque
+PROCEDURE_SECTION_E_STEPS:
+
+Reinstall the wheels onto the hubs.
+
+Hand-tighten all lug nuts in a star pattern.
+
+Raise the RV using the jack, remove the jack stands, and lower the RV back down so the tires are on the ground.
+
+Using a calibrated torque wrench, tighten the lug nuts to the manufacturer's specified torque in a star pattern. For 3,200 lb axles, this is typically 90-100 ft-lbs.
+
+Repeat the entire process on the other side of the RV.
+
+Once both sides are complete, remove all tools and chocks.
+ 
+TROUBLESHOOTING_ISSUES:
+
+Issue: No grease is exiting the wet bolt. Cause: Clogged zerk, dry-seized bushing, or misaligned zerk/bushing. Action: Attempt to clear the zerk with a zerk tool. If that fails, the bolt and bushing may need to be replaced.
+
+Issue: The hub does not spin freely after reinstallation. Cause: The spindle nut is too tight, or the bearings are improperly seated. Action: Back off the spindle nut and re-adjust. Recheck bearing preload and end play.
+
+Issue: New grease seal is damaged during installation. Cause: Improper seating or misalignment. Action: Immediately discard the damaged seal and install a new one. Do not use a damaged seal.
+
+Issue: Excessive end play after reinstallation. Cause: Spindle nut is too loose. Action: Re-adjust the spindle nut following the proper procedure to remove play without binding.
+ 
+MAINTENANCE_SCHEDULE:
+
+Wheel Bearing Repack: Annually, or every 12,000 miles, whichever comes first.
+
+Suspension Component Lubrication (Wet Bolts): Annually, or every 5,000 miles for frequent travelers, or when wet bolts appear dry.
+
+Brake Inspection: Annually, concurrent with bearing service.
+
+U-Bolt Torque: Inspect and re-torque U-bolts to proper specification annually, or if any axle movement is detected.
+ 
+REFERENCED_DOCUMENTS:
+
+Lippert Components Trailer Axle Hub Replacement Service Manual
+
+RV Service Center Technical Bulletin: LOTO Procedures
+ 
+DEFINITIONS_TERMS:
+
+Wet Bolt: A suspension shackle bolt that includes a zerk (grease fitting) to allow for easy lubrication of the bushing.
+
+Spindle: The fixed axle shaft that the wheel hub and bearings ride on.
+
+Hub/Drum: The assembly that holds the bearings and provides a mounting surface for the wheel, as well as the braking surface for the electric brakes.
+
+Preload: The slight amount of tension applied to the bearings to ensure proper seating and reduce end play.

@@ -1,0 +1,156 @@
+Got it. Here’s exactly how I built that “trade logic” file before—and where to mine the source truth so you can rinse–repeat for boilers, electricians, HVAC, plumbing, welding, fire protection, rigging, etc.
+
+# How I did it (repeatable playbook)
+
+1. **Pick the trade + scope** (e.g., “boiler annual service” or “480V MCC troubleshooting”).
+2. **Pull the law first** (OSHA + any mandated code).
+3. **Layer the model code/standard** (NEC/IMC/IPC/NFPA/ASME/etc.).
+4. **Grab the OEM IOM + service bulletins** for the exact model(s).
+5. **Add inspection/testing standards** (API/NETA/NBIC/etc.).
+6. **Cross-check with training curricula** to fill gaps (NCCER/IBEW/UA/NATE/RSES).
+7. **Write the logic** as: hazards/PPE → prerequisites/LOTO → step-by-step → test points & instruments → pass/fail tolerances → return-to-service → records.
+
+# Where to look (authorities & libraries)
+
+**Core safety (law):**
+
+* OSHA 29 CFR 1910 (General Industry) index + eCFR for the actual legal text. ([OSHA][1], [eCFR][2])
+
+**Electrical (installations & safety):**
+
+* **NEC (NFPA 70)** for installs; **NEC adoption map** when you need the edition your state enforces. ([NFPA][3])
+* **NFPA 70E** for energized work, arc-flash PPE, boundaries. ([NFPA][4])
+* **IEEE 1584** for arc-flash calcs. ([IEEE Standards Association][5])
+* **NETA ATS/MTS** for acceptance/maintenance testing of switchgear, transformers, breakers. ([cganet.com][6])
+
+**Boilers / pressure equipment / piping:**
+
+* **ASME BPVC** (construction & foundational references). ([ASME][7])
+* **NBIC (NB-23)** for *in-service* installation, inspection, repair/alteration. ([nationalboard.org][8])
+* **ASME B31.1/B31.3** for power/process piping. ([bicsi.org][9], [Wikipedia][10])
+* **API 510/570/653** for vessel, piping, and tank inspection programs. ([bicsi.org][11], [trueCABLE][12])
+
+**HVAC/R & mechanical:**
+
+* **IMC (ICC)** for mechanical work in buildings. ([edufire.ir][13])
+* **ASHRAE** key standards: 15 (refrigeration safety), 34 (refrigerant designations), 62.1 (ventilation), 90.1 (energy). ([eCFR][14])
+* **EPA Section 608** (certs, handling, recordkeeping) + current refrigerant management updates. ([US EPA][15])
+* **SMACNA** for duct construction/installation details. ([www.smacna.org][16])
+
+**Plumbing:**
+
+* **IPC (ICC)** and/or **UPC (IAPMO)** depending on jurisdiction. (Start with ICC IPC overview.) ([AWS Bookstore][17])
+
+**Fire protection:**
+
+* **NFPA 13** (sprinkler install), **NFPA 25** (ITM for water-based systems), **NFPA 72** (fire alarm). ([NFPA][18], [www.assp.org][19], [United Rentals][20])
+* **IFC/IBC (ICC)** for operational and building fire/life-safety provisions. ([ICC Digital Codes][21])
+
+**Rigging / cranes / lifts / PITs:**
+
+* **OSHA** 1910.178 (forklifts), 1926 Subpart CC (cranes), 1910.184 (slings). ([Automotive Lift Institute |][22])
+* **ASME B30** series (rigging/hoists), **ANSI A92** (MEWPs), **ALI ALCTV** (automotive lifts). ([mactechonsite.com][23], [ASME][24], [NRC Web][25])
+
+**Work at heights / LOTO / confined space / HazCom:**
+
+* **LOTO** 1910.147; **Confined Space** 1910.146; **Walking-Working Surfaces** Subpart D; **HazCom** 1910.1200. ([LANL Engineering Standards][26], [ASME][24], [mactechonsite.com][23], [NRC Web][25])
+* **ANSI Z359** fall protection. ([LANL Engineering Standards][26])
+
+**Compressed gases & PPE reference standards:**
+
+* **CGA** standards (gas cylinders, regulators, storage). ([cganet.com][6])
+* **ANSI/ISEA Z87.1** (eye/face), **ANSI/ISEA Z89.1** (head), **ASTM F2413** (footwear). ([The ANSI Blog][27], [ASTM International | ASTM][28])
+
+**Instrumentation & controls:**
+
+* **ISA-5.1** (P\&ID symbols), **IEC 61511** (SIS for process), **ISA/IEC 62443** (industrial cybersecurity). ([isa.org][29], [The ANSI Blog][30], [Wikipedia][31])
+
+**Low-voltage/data:**
+
+* **BICSI** practices; **TIA-568** cabling standard family. ([Wikipedia][32], [SAVA M\&E - Công Ty Cơ Điện Lạnh][33])
+
+**Water/wastewater:**
+
+* **AWWA** standards & manuals of practice. ([American Water Works Association][34])
+
+**Reliability & asset mgmt (to tighten your PM/CMMS logic):**
+
+* **SMRP Body of Knowledge**, **ISO 55000**. ([Accendo Reliability][35], [Asset Leadership Network][36])
+
+**Incident learning (to seed hazard sections with real fails):**
+
+* **NIOSH FACE** reports; **US CSB** investigations. ([FoodSafety.gov][37], [Chemical Processing][38])
+
+**Manufacturer technical libraries (gold for exact procedures/specs):**
+
+* Rockwell Automation Literature Library; Siemens Industry Support; Trane/Carrier literature hubs; Cleaver-Brooks boiler manuals. ([Rockwell Automation][39], [SiePortal][40], [Trane Support][41], [Carrier][42], [Cleaver-Brooks][43])
+
+**Jurisdictional adoption (don’t skip):**
+
+* ICC adoption maps by state; NEC enforcement maps by state. Always confirm local amendments with the AHJ. ([ICC][44], [NFPA][45])
+
+---
+
+## Fast build pattern per trade (use this without overthinking)
+
+* **Electrical MCC troubleshooting** → OSHA 1910 + NFPA 70/70E + NETA MTS/ATS + OEM starter/VFD manuals + IEEE 1584 for arc-flash tables. ([OSHA][1], [NFPA][3], [cganet.com][6], [Rockwell Automation][39], [IEEE Standards Association][5])
+* **Steam boiler annual** → ASME BPVC references + NBIC Part 2 (inspection) + API where applicable + OEM (e.g., Cleaver-Brooks) + OSHA LOTO/Confined Space if entering drums. ([ASME][7], [nationalboard.org][8], [bicsi.org][11], [Cleaver-Brooks][43], [LANL Engineering Standards][26])
+* **HVAC/R leak/charge** → IMC + ASHRAE 15/34 + EPA 608 (tech cert + handling) + OEM service bulletins/manuals. ([edufire.ir][13], [eCFR][14], [US EPA][15], [Trane Support][41])
+* **Sprinkler ITM** → NFPA 25 (program) + NFPA 13 (design references) + IFC operational requirements. ([www.assp.org][19], [NFPA][18], [ICC Digital Codes][21])
+* **Rigging/MEWP** → OSHA 1910.184/1926 CC + ASME B30 + ANSI A92. ([Automotive Lift Institute |][22], [mactechonsite.com][23], [ASME][24])
+
+---
+
+## Practical tips (so you move fast)
+
+* **Always lock the edition** (e.g., “NFPA 70E-2024”) and **note your state’s adoption** before you write a single step. ([NFPA][45])
+* **Chunk your SOP** into: Purpose → References (exact clauses) → Tools & PPE → Pre-job checks → Procedure (numbered) → Test/verify (with instrument and thresholds) → Records/labels → Return-to-service.
+* **When in doubt, default to OSHA + the model code + the OEM**, then tighten with the specialty standard.
+
+If you want, say the word and I’ll spin up a starter “Trade Logic” template for your next target (boiler tune, rooftop VFD swap, crane lift plan, whatever) and preload it with the correct citations for your state.
+
+[1]: https://www.osha.gov/laws-regs/regulations/standardnumber/1910?utm_source=chatgpt.com "1910 | Occupational Safety and Health Administration"
+[2]: https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1910?utm_source=chatgpt.com "29 CFR Part 1910 -- Occupational Safety and Health ..."
+[3]: https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70?utm_source=chatgpt.com "NFPA 70 (NEC) Code Development"
+[4]: https://www.nfpa.org/codes-and-standards/nfpa-70e-standard-development/70e?utm_source=chatgpt.com "NFPA 70E Standard Development"
+[5]: https://standards.ieee.org/ieee/1584/5802/?utm_source=chatgpt.com "IEEE 1584-2018"
+[6]: https://www.cganet.com/standards/?utm_source=chatgpt.com "Standards - About"
+[7]: https://www.asme.org/codes-standards/bpvc-standards?utm_source=chatgpt.com "ASME Boiler and Pressure Vessel Code (BPVC)"
+[8]: https://www.nationalboard.org/index.aspx?pageID=4&utm_source=chatgpt.com "National Board Inspection Code (NBIC)"
+[9]: https://www.bicsi.org/standards/bicsi-standards/standardization/installation?utm_source=chatgpt.com "BICSI Standards Installation"
+[10]: https://en.wikipedia.org/wiki/ANSI/TIA-568?utm_source=chatgpt.com "ANSI/TIA-568"
+[11]: https://www.bicsi.org/standards/bicsi-standards/resources/standards-frequently-asked-questions?utm_source=chatgpt.com "Standards Frequently Asked Questions"
+[12]: https://www.truecable.com/blogs/cable-academy/the-ansi-tia-568-series-of-specifications-what-is-most-important-to-know-for-copper?srsltid=AfmBOoqqR4wEus2i2WFrT4Y-SMyyR_HLSKm7pIAssvJoB-W_gn-NCHnQ&utm_source=chatgpt.com "The ANSI/TIA 568 Series of Specifications: What is Most ..."
+[13]: https://edufire.ir/storage/Library/elam/NFPA%2072-2019.pdf?utm_source=chatgpt.com "NFPA 72-2019.pdf"
+[14]: https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1910/subpart-N/section-1910.178?utm_source=chatgpt.com "29 CFR 1910.178 -- Powered industrial trucks."
+[15]: https://www.epa.gov/section608/section-608-technician-certification-requirements?utm_source=chatgpt.com "Section 608 Technician Certification Requirements | US EPA"
+[16]: https://www.smacna.org/technical-standards?utm_source=chatgpt.com "Technical Standards"
+[17]: https://pubs.aws.org/Download_PDFS/D1.1-D1.1M-2015-PV.pdf?srsltid=AfmBOor9QqL3N1l3k6PAgzglA3jrgew3Gq1_B7a5VsOMMcUlKktuX4wy&utm_source=chatgpt.com "Structural Welding Code— Steel"
+[18]: https://www.nfpa.org/codes-and-standards/nfpa-13-standard-development/13?utm_source=chatgpt.com "NFPA 13 Standard Development"
+[19]: https://www.assp.org/standards/standards-topics/fall-protection-and-fall-restraint-z359?utm_source=chatgpt.com "Z359 Why Use Fall Protection and Fall Restraint Standards"
+[20]: https://www.unitedrentals.com/project-uptime/safety/ansi-a92-your-guide-new-aerial-lift-standards?utm_source=chatgpt.com "Guide to ANSI A92: New Aerial Lift Standards for Operation"
+[21]: https://codes.iccsafe.org/content/IFC2021P1?utm_source=chatgpt.com "2021 International Fire Code (IFC) - ICC Digital Codes"
+[22]: https://www.autolift.org/product/ansiali-alctv-standard-2017/?utm_source=chatgpt.com "ANSI/ALI ALCTV: 2017 Standard for Automotive Lifts"
+[23]: https://www.mactechonsite.com/wp-content/uploads/API-ASME-Pressure-Vessel-Inspection-Code.pdf?utm_source=chatgpt.com "API 510 (2006): Pressure Vessel Inspection Code"
+[24]: https://www.asme.org/codes-standards/find-codes-standards/b31-1-power-piping?utm_source=chatgpt.com "B31.1 - Power Piping"
+[25]: https://www.nrc.gov/docs/ML1233/ML12339A557.pdf?utm_source=chatgpt.com "API 570, Second Edition, Piping Inspection Code. ..."
+[26]: https://engstandards.lanl.gov/esm/pressure_safety/Section%20REF-3-R0.pdf?utm_source=chatgpt.com "ASME B31.3 Process Piping Guide"
+[27]: https://blog.ansi.org/ansi/ansi-isea-z87-1-2020-safety-glasses-eye-protection/?utm_source=chatgpt.com "ANSI/ISEA Z87.1-2020: Current Standard for Safety Glasses"
+[28]: https://www.astm.org/f2413-18.html?utm_source=chatgpt.com "F2413 Standard Specification for Performance ..."
+[29]: https://www.isa.org/standards-and-publications/isa-standards/isa-5-standard?utm_source=chatgpt.com "ISA-5 Series of Standards"
+[30]: https://blog.ansi.org/ansi/ansi-neta-ats-2021-electrical-power-testing/?utm_source=chatgpt.com "ANSI/NETA ATS-2021: Standard for Acceptance Testing ..."
+[31]: https://en.wikipedia.org/wiki/Operational_technology?utm_source=chatgpt.com "Operational technology - WikipediaIEC 62443 Standard: Enhancing Cybersecurity for Industrial ..."
+[32]: https://en.wikipedia.org/wiki/ASHRAE_90.1?utm_source=chatgpt.com "ASHRAE 90.1 - Wikipedia"
+[33]: https://www.savame.com/wp-content/uploads/2024/06/smacna-hvac-duct-construction-standards-metal-and-flexible-4th-edition-2020.pdf?utm_source=chatgpt.com "HVAC DUCT CONSTRUCTION STANDARDS"
+[34]: https://www.awwa.org/standards/?utm_source=chatgpt.com "AWWA Standards"
+[35]: https://accendoreliability.com/understanding-smrp-body-knowledge/?utm_source=chatgpt.com "Understanding the SMRP Body of Knowledge"
+[36]: https://www.assetleadership.net/iso55000-base/iso-55000-asset-management-overview/?utm_source=chatgpt.com "ISO 55000 Asset Management Overview"
+[37]: https://espanol.foodsafety.gov/_www_cdc_gov/niosh/face/about/about-state-face-programs.html?utm_source=chatgpt.com "About State Fatality Assessment and Control Evaluation™ ..."
+[38]: https://www.chemicalprocessing.com/safety-security/risk-assessment/news/55261153/csb-safety-incident-reports-now-available-to-public?utm_source=chatgpt.com "CSB Safety Incident Reports Now Available to Public"
+[39]: https://www.rockwellautomation.com/en-us/support/documentation/literature-library.html?utm_source=chatgpt.com "Literature Library | Rockwell Automation | US"
+[40]: https://sieportal.siemens.com/en-us/support?utm_source=chatgpt.com "Support Page"
+[41]: https://support.trane.com/hc/en-us/sections/360011371151-Manuals-Application-Guides-Literature?utm_source=chatgpt.com "Manuals/Application Guides/Literature"
+[42]: https://www.carrier.com/commercial/en/us/literature/?utm_source=chatgpt.com "Product Document Search | Carrier Commercial Systems ..."
+[43]: https://cleaverbrooks.com/cbt-manuals?utm_source=chatgpt.com "CBT Manuals"
+[44]: https://www.iccsafe.org/adoptions/code-adoption-map/IBC?utm_source=chatgpt.com "ibc code adoption"
+[45]: https://www.nfpa.org/education-and-research/electrical/nec-enforcement-maps?utm_source=chatgpt.com "Learn where the NEC is enforced."

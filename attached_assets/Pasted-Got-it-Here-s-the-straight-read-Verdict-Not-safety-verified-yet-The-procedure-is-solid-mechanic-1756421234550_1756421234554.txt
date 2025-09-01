@@ -1,0 +1,105 @@
+Got it. Here’s the straight read.
+
+Verdict
+
+Not safety-verified yet. The procedure is solid mechanically, but it’s missing several critical controls (unexpected start/AGS lockout, CO controls, waste labeling/handling, oily-rag controls, basic vehicle securement). Fix these before you publish or use it.
+
+Critical fixes (must add)
+
+Lockout / AGS disable: Prevent unexpected start. Disable auto-gen start (AGS), switch the generator to OFF at all remotes, and isolate power for the generator circuit (e.g., pull the generator start fuse or disconnect the generator’s negative battery lead). Tag at the interior start switch: “DO NOT START – SERVICE IN PROGRESS.” This aligns with OSHA’s hazardous-energy control principles for preventing unexpected energization. 
+OSHA
++2
+OSHA
++2
+
+CO/exhaust control: Your “well-ventilated” note isn’t enough. Run/verify only outdoors and >20 ft from openings, or use hard-ducted exhaust extraction. Never run in a bay/garage—even with doors open. Add “verify functioning CO alarm in coach/shop.” 
+CDC
++1
+
+Vehicle securement: Add parking brake + wheel chocks before crawling under or working around the chassis or drop-down genset trays.
+
+Fire & spill readiness: List a Class B fire extinguisher within reach and secondary containment (tray under the drain pan). Keep ignition sources away (no smoking, no hot work). Manage oily rags in a closed metal oily-waste can; that’s an OSHA requirement for combustibles. 
+OSHA
++1
+
+Used-oil compliance: Say explicitly: store/transport used oil in a closed, sound container labeled “USED OIL.” Don’t mix with solvents or fuel. This is required under 40 CFR 279.22(c) (EPA used-oil rules). 
+US EPA
+eCFR
+
+SDS/HazCom: Note that the SDS for engine oil must be available and PPE selected from a hazard assessment (gloves/eye pro are fine; add sleeves if splash risk). 
+OSHA
+
+Technical corrections (quality/safety)
+
+Warm, not hot: “Cool to the touch” is safe, but draining slightly warm gives a cleaner purge. State: warm engine 2–3 min, then shut down and allow to cool to safe handling temp before service.
+
+Unexpected start sources: Besides AGS, kill inverter/charger autostart features and any remote start apps.
+
+Clean before open: Wipe around the fill cap, dipstick, and filter base before removal to prevent grit ingress.
+
+Filter gasket check: Call out remove old gasket if it sticks to the base (double-gasket = instant leak).
+
+Do not use thread tape on the drain plug. Use the specified crush washer; torque to spec only.
+
+Filter prefill: Only prefill if the filter is vertical/upright and the OEM allows it. Many RV gensets mount filters sideways—prefill will spill and can introduce dirt. Default to oiling the gasket only.
+
+Post-run check: After refill, run 60–120 seconds max outdoors, verify oil pressure indicator, shut down, wait a few minutes, and recheck level/leaks.
+
+Filter & rag disposal: Hot-drain the old filter and manage as used-oil/metal per local rules; oily rags into the closed metal can until daily disposal. 
+OSHA
+
+Record the hour-meter (Hobbs) and set next interval—not just date/fluid info.
+
+Corrected SOP (condensed)
+
+Secure & lock out: Park level, brake ON, chock wheels. Switch all generator controls to OFF, disable AGS/remote starts, and isolate the gen start circuit (pull fuse or disconnect gen negative lead). Tag “Do Not Start.” 
+OSHA
+
+Controls & PPE: Confirm Class B extinguisher, spill kit, SDS on site. Don gloves + eye protection. 
+OSHA
+
+CO control: If you will run the gen for verification, move the rig outdoors and keep >20 ft from openings (or connect an exhaust extractor). 
+CDC
+
+Warm & prep: Warm the generator 2–3 min, shut down, cool to safe touch. Wipe around fill cap/filter base.
+
+Pan & containment: Place drain pan + secondary tray under drain area.
+
+Drain oil: Remove drain plug (no thread tape). Catch oil; replace crush washer if spec’d.
+
+Remove filter: Catch residual oil. Verify old gasket not stuck to base.
+
+Install filter: Oil the new gasket; hand-tighten per OEM (or torque if spec provided).
+
+Reinstall plug: Torque to OEM spec; clean residue.
+
+Refill: Add OEM-specified oil/volume via funnel. Avoid overfill.
+
+Start/verify (outdoors): Reconnect gen battery/fuse. Start 60–120 sec, check pressure indicator and leaks, then shut down and cool a few minutes. Recheck level; top to full.
+
+Restore & clean: Reinstall panels/shields, remove tags only when complete. Wipe compartment.
+
+Waste handling: Transfer used oil to a closed, sound container labeled “USED OIL.” Hot-drain filter; store rags in closed metal can for daily disposal/recycling. Transport to an approved collection site. 
+US EPA
+OSHA
+
+Log: Record date, hour-meter, oil brand/viscosity, filter P/N, tech ID, and next due interval.
+
+Compliance notes (why these matter)
+
+Unexpected energization (LOTO principles) prevents injury from an auto-start or a second person hitting the switch. 
+OSHA
+
+CO controls require outdoor operation well away from openings; “ventilated bay” is not sufficient. 
+CDC
+
+Used-oil labeling & closed containers are explicit EPA rules for generators of used oil. 
+US EPA
+
+Oily-rag closed metal receptacles and combustible control are OSHA requirements tied to flammable-liquid housekeeping. 
+OSHA
+
+PPE selection must follow a hazard assessment (oil splash, debris). 
+OSHA
+
+If you want, I’ll rewrite your SOP in your house style with these fixes baked in and a short checklist version for the field.
