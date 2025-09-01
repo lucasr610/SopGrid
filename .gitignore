@@ -1,0 +1,75 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+
+# Test coverage and results
+coverage/
+*.lcov
+.nyc_output/
+test-results/
+playwright-report/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Cache directories
+.cache/
+.eslintcache
+.parcel-cache/
+
+# Build artifacts
+build/
+out/
+
+# Temporary folders
+tmp/
+temp/
+
+# Security and secrets
+*.key
+*.pem
+*.p12
+*.pfx
+credentials/
+secrets/
+security-scan-results.json
+trufflehog-results.jsondist/\ndata/*.db*\n.cache/\nattached_assets/*.pdf
+node_modules/
+*.zip
+dist/

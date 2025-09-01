@@ -1,0 +1,67 @@
+Replacing a single-zone Furrion 13.5k BTU Cool-Only A/C unit involves several steps, requiring attention to detail and adherence to safety procedures. Here's a breakdown of the process for both indoor and outdoor components:
+
+**Safety First:**
+
+* **Disconnect power:** Turn off the breaker supplying power to the A/C unit at the main electrical panel. Double-check with a non-contact voltage tester to ensure power is off.
+
+* **Propane shut-off (if applicable):** If your RV uses propane for other appliances, consider shutting it off at the tank as a precaution.
+
+* **Work safely at heights:** Use appropriate ladders and fall protection when working on the roof.
+
+**Outdoor Unit Replacement:**
+
+1. **Remove shroud and access panels:** Carefully remove the exterior shroud covering the A/C unit. This typically involves unscrewing several fasteners. Also, remove any interior access panels that may block access to wiring and refrigerant lines.
+
+2. **Recover refrigerant (if applicable):** **This step is crucial and legally required.** Only a certified HVAC technician with the proper equipment can legally recover the refrigerant. **Do not attempt to vent the refrigerant into the atmosphere as it is illegal and harmful to the environment.**
+
+3. **Disconnect electrical connections:** Carefully label and disconnect all wiring connections to the A/C unit. Take pictures for reference during reinstallation.
+
+4. **Disconnect refrigerant lines:** If the system hasn't been professionally evacuated, **do not disconnect the lines.** If evacuated, use two wrenches to loosen the refrigerant line connections at the service ports. Be prepared for a small amount of residual refrigerant oil.
+
+5. **Remove mounting hardware:** Unscrew the bolts securing the A/C unit to the roof. Have an assistant help support the unit while removing the final bolts.
+
+6. **Lower the old unit:** Carefully lower the old unit to the ground, avoiding damage to the RV roof.
+
+7. **Prepare the new unit:** Remove the new A/C unit from its packaging and inspect for any shipping damage. Attach the mounting gasket (if applicable) to the new unit.
+
+8. **Lift and secure the new unit:** Carefully lift the new unit onto the roof and align it with the existing opening. Secure it with the appropriate mounting hardware, ensuring it's level and properly sealed.
+
+9. **Connect refrigerant lines:** Using two wrenches, carefully tighten the refrigerant line connections to the new unit's service ports.
+
+10. **Connect electrical wiring:** Reconnect all wiring according to your labels and photographs. Ensure all connections are secure.
+
+11. **Replace shroud and access panels:** Reinstall the exterior shroud and any interior access panels.
+
+12. **Vacuum and charge:** **This step must be performed by a certified HVAC technician.** The system needs to be evacuated to remove air and moisture before being charged with the correct type and amount of refrigerant as specified by the manufacturer.
+
+**Indoor Unit Replacement (if applicable):**
+
+1. **Remove the air distribution box cover:** This usually involves removing a few screws or clips.
+
+2. **Disconnect wiring and ducting:** Carefully disconnect the wiring harness and any ducting connected to the air distribution box.
+
+3. **Remove the old air distribution box:** Unscrew the fasteners securing the box to the ceiling.
+
+4. **Install the new air distribution box:** Position the new box and secure it with the appropriate fasteners.
+
+5. **Reconnect wiring and ducting:** Reconnect the wiring harness and ducting to the new air distribution box.
+
+6. **Reattach the cover:** Secure the air distribution box cover.
+
+**Final Steps:**
+
+* **Leak test:** After the refrigerant charge, the technician should perform a leak test to ensure the system is sealed.
+
+* **Test operation:** Turn on the breaker and test the A/C unit for proper operation. Verify cooling, fan speeds, and thermostat functionality.
+
+**Important Considerations:**
+
+* **Warranty:** Using a certified HVAC technician will maintain the warranty on your new A/C unit.
+
+* **Local Codes:** Be aware of and comply with any local codes or regulations regarding A/C installation and refrigerant handling.
+
+* **Disposal:** Dispose of the old A/C unit responsibly according to local regulations.
+
+This information is for general guidance only. Consult the specific installation instructions provided with your new Furrion A/C unit for detailed procedures and safety precautions. If you are uncomfortable with any part of this process, it is strongly recommended to hire a qualified RV technician.
+
+---
