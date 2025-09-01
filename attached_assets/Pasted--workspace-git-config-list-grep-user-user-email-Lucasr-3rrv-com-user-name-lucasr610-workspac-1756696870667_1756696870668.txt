@@ -1,0 +1,644 @@
+~/workspace$ git config --list | grep user
+user.email=Lucasr@3rrv.com
+user.name=lucasr610
+~/workspace$ git push
+fatal: The current branch enhanced-input-validation-darkened-ui has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin enhanced-input-validation-darkened-ui
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+~/workspace$ 
+~/workspace$ git push -u origin enhanced-input-validation-darkened-ui
+Enumerating objects: 7450, done.
+Counting objects: 100% (7450/7450), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5322/5322), done.
+error: RPC failed; HTTP 408 curl 22 The requested URL returned error: 408
+send-pack: unexpected disconnect while reading sideband packet
+Writing objects: 100% (7450/7450), 1.08 GiB | 19.69 MiB/s, done.
+Total 7450 (delta 3581), reused 5011 (delta 1777), pack-reused 0 (from 0)
+fatal: the remote end hung up unexpectedly
+Everything up-to-date
+~/workspace$ git remote add origin https://github.com/lucasr610/SopGrid.git
+error: remote origin already exists.
+~/workspace$ git checkout main
+git push -u origin main
+Switched to branch 'main'
+Enumerating objects: 7446, done.
+Counting objects: 100% (7446/7446), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5318/5318), done.
+Writing objects: 100% (7446/7446), 1.08 GiB | 4.91 MiB/s, done.
+Total 7446 (delta 3579), reused 5011 (delta 1777), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3579/3579), done.
+remote: warning: File sopgrid-clean-final.zip is 72.12 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: File zixowIGX is 52.08 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: File attached_assets/oracle_archive-20250819T012141Z-1-001_1755911350689.zip is 73.63 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: error: Trace: 137076fd2259ad2766744f8397b2d8d2348d314fe56198457d0b8025c07ad0d8
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File SOPGRID-Desktop.zip is 387.51 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: File zilB8cXg is 250.88 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/lucasr610/SopGrid
+ ! [remote rejected] main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/lucasr610/SopGrid'
+~/workspace$ git checkout -b github-upload
+Switched to a new branch 'github-upload'
+~/workspace$ du -h * | grep -E '[0-9]+M' | sort -hr
+661M    node_modules
+83M node_modules/react-icons
+37M attached_assets
+36M node_modules/date-fns
+34M node_modules/pdf-parse
+33M node_modules/lucide-react
+32M node_modules/three
+31M node_modules/lucide-react/dist
+29M node_modules/pdf-parse/lib/pdf.js
+29M node_modules/pdf-parse/lib
+24M node_modules/date-fns/locale
+23M node_modules/typescript
+22M node_modules/typescript/lib
+17M node_modules/three/examples
+17M node_modules/@google-ai/generativelanguage/build
+17M node_modules/@google-ai/generativelanguage
+17M node_modules/@google-ai
+17M node_modules/drizzle-kit
+15M node_modules/lucide-react/dist/esm/icons
+15M node_modules/lucide-react/dist/esm
+15M node_modules/@google-ai/generativelanguage/build/protos
+15M client
+14M node_modules/three/examples/jsm
+14M node_modules/react-icons/gi
+14M node_modules/drizzle-orm
+13M node_modules/vite
+13M client/public
+12M node_modules/rxjs
+12M node_modules/react-icons/pi
+12M node_modules/better-sqlite3
+12M attached_assets/generated_images
+11M node_modules/openai
+11M node_modules/es-abstract
+11M node_modules/@babel
+10M node_modules/react-icons/si
+9.8M    node_modules/@tailwindcss
+9.8M    node_modules/@esbuild/linux-x64/bin
+9.8M    node_modules/@esbuild/linux-x64
+9.8M    node_modules/@esbuild
+9.7M    node_modules/@google
+9.6M    node_modules/better-sqlite3/deps/sqlite3
+9.6M    node_modules/better-sqlite3/deps
+9.5M    node_modules/vite/node_modules
+9.5M    node_modules/.vite/deps
+9.5M    node_modules/.vite
+9.4M    node_modules/three/examples/jsm/libs
+9.4M    node_modules/rxjs/dist
+9.4M    node_modules/drizzle-kit/node_modules
+9.3M    node_modules/vite/node_modules/@esbuild/linux-x64/bin
+9.3M    node_modules/vite/node_modules/@esbuild/linux-x64
+9.3M    node_modules/vite/node_modules/@esbuild
+9.2M    node_modules/three/build
+9.2M    node_modules/@esbuild-kit/core-utils
+9.2M    node_modules/@esbuild-kit
+9.2M    node_modules/drizzle-kit/node_modules/@esbuild/linux-x64/bin
+9.2M    node_modules/drizzle-kit/node_modules/@esbuild/linux-x64
+9.2M    node_modules/drizzle-kit/node_modules/@esbuild
+9.1M    node_modules/lucide-react/dist/umd
+9.1M    node_modules/@google/genai/dist
+9.1M    node_modules/@google/genai
+9.1M    node_modules/@esbuild-kit/core-utils/node_modules
+9.0M    node_modules/@esbuild-kit/core-utils/node_modules/@esbuild/linux-x64/bin
+9.0M    node_modules/@esbuild-kit/core-utils/node_modules/@esbuild/linux-x64
+9.0M    node_modules/@esbuild-kit/core-utils/node_modules/@esbuild
+8.8M    node_modules/pdf-parse/lib/pdf.js/v1.10.88
+8.8M    node_modules/lightningcss-linux-x64-musl
+8.8M    node_modules/lightningcss-linux-x64-gnu
+8.8M    node_modules/fetch-blob/node_modules/web-streams-polyfill
+8.8M    node_modules/fetch-blob/node_modules
+8.8M    node_modules/fetch-blob
+8.7M    node_modules/fetch-blob/node_modules/web-streams-polyfill/dist
+8.6M    node_modules/@types
+8.5M    node_modules/@typescript-eslint
+8.4M    node_modules/playwright-core
+8.2M    node_modules/prettier
+8.2M    node_modules/pdf-parse/lib/pdf.js/v1.9.426
+7.3M    node_modules/@dimforge/rapier3d-compat
+7.3M    node_modules/@dimforge
+6.7M    node_modules/react-icons/tb
+6.6M    node_modules/playwright-core/lib
+6.3M    node_modules/prettier/plugins
+6.2M    node_modules/tailwindcss
+6.2M    node_modules/pdf-parse/lib/pdf.js/v1.10.100/build
+6.2M    node_modules/pdf-parse/lib/pdf.js/v1.10.100
+6.0M    node_modules/pdf-parse/lib/pdf.js/v2.0.550/build
+6.0M    node_modules/pdf-parse/lib/pdf.js/v2.0.550
+5.8M    node_modules/pdf-parse/lib/pdf.js/v1.10.88/build
+5.5M    node_modules/three/src
+5.4M    node_modules/google-gax
+5.4M    node_modules/date-fns/fp
+5.3M    node_modules/pdf-parse/lib/pdf.js/v1.9.426/build
+5.2M    node_modules/recharts
+5.0M    node_modules/@anthropic-ai/sdk
+5.0M    node_modules/@anthropic-ai
+4.9M    node_modules/openai/resources
+4.9M    node_modules/lucide-react/dist/cjs
+4.9M    node_modules/lodash
+4.8M    node_modules/@rollup
+4.8M    node_modules/pdf-parse/test
+4.7M    node_modules/pdf-parse/test/data
+4.6M    node_modules/react-icons/md
+4.5M    node_modules/mongodb
+4.4M    node_modules/react-dom
+4.3M    node_modules/tailwindcss/peers
+4.3M    node_modules/react-icons/lia
+4.3M    node_modules/jsdom/lib/jsdom
+4.3M    node_modules/jsdom/lib
+4.3M    node_modules/jsdom
+4.2M    node_modules/@types/three
+4.2M    node_modules/react-icons/ri
+4.2M    node_modules/@radix-ui
+4.2M    node_modules/playwright
+4.1M    node_modules/jsdom/lib/jsdom/living
+4.0M    node_modules/@tanstack
+4.0M    node_modules/framer-motion/dist
+4.0M    node_modules/framer-motion
+4.0M    node_modules/eslint
+4.0M    node_modules/caniuse-lite
+3.9M    node_modules/@typescript-eslint/eslint-plugin/dist
+3.9M    node_modules/@typescript-eslint/eslint-plugin
+3.9M    node_modules/caniuse-lite/data
+3.7M    node_modules/google-gax/build
+3.7M    node_modules/eslint/lib
+3.6M    node_modules/three/examples/jsm/libs/draco
+3.5M    node_modules/react-icons/fa6
+3.5M    node_modules/react-icons/bs
+3.5M    node_modules/playwright/lib
+3.4M    node_modules/three/examples/fonts
+3.4M    node_modules/@grpc
+3.3M    node_modules/@grpc/grpc-js
+3.3M    node_modules/@google/genai/dist/node
+3.1M    node_modules/protobufjs
+3.0M    node_modules/vite/dist
+3.0M    node_modules/tldts
+3.0M    node_modules/@tailwindcss/node
+3.0M    node_modules/pdf-parse/lib/pdf.js/v1.9.426/web
+3.0M    node_modules/pdf-parse/lib/pdf.js/v1.10.88/web
+3.0M    node_modules/@microsoft/eslint-plugin-sdl
+3.0M    node_modules/@microsoft
+3.0M    node_modules/google-gax/build/protos
+3.0M    node_modules/@babel/types/lib
+3.0M    node_modules/@babel/types
+3.0M    node_modules/@asamuzakjp/css-color
+3.0M    node_modules/@asamuzakjp
+2.9M    node_modules/@tailwindcss/oxide-linux-x64-musl
+2.9M    node_modules/@tailwindcss/oxide-linux-x64-gnu
+2.9M    node_modules/@anthropic-ai/sdk/node_modules
+2.8M    node_modules/vite/dist/node
+2.8M    node_modules/@types/three/src
+2.8M    node_modules/@typescript-eslint/eslint-plugin/dist/rules
+2.8M    node_modules/tldts/dist
+2.8M    node_modules/three/examples/jsm/libs/rhino3dm
+2.8M    node_modules/@tailwindcss/node/node_modules
+2.8M    node_modules/react-icons/fa
+2.8M    node_modules/playwright-core/lib/vite
+2.8M    node_modules/@microsoft/eslint-plugin-sdl/node_modules
+2.8M    node_modules/bson
+2.7M    node_modules/mongodb/lib
+2.7M    node_modules/jsdom/lib/jsdom/living/generated
+2.7M    node_modules/@google-ai/generativelanguage/build/src
+2.7M    node_modules/drizzle-orm/pg-core
+2.6M    node_modules/vite/dist/node/chunks
+2.6M    node_modules/rollup
+2.6M    node_modules/@google/genai/dist/web
+2.6M    node_modules/eslint-plugin-react
+2.5M    node_modules/@tanstack/query-core
+2.5M    node_modules/rollup/dist
+2.5M    node_modules/recharts/umd
+2.5M    node_modules/react-dom/cjs
+2.5M    node_modules/eslint/lib/rules
+2.5M    client/src
+2.4M    node_modules/@rollup/rollup-linux-x64-musl
+2.4M    node_modules/@rollup/rollup-linux-x64-gnu
+2.4M    node_modules/protobufjs/dist
+2.4M    node_modules/axios
+2.3M    node_modules/@types/node
+2.3M    node_modules/caniuse-lite/data/features
+2.2M    node_modules/@typescript-eslint/scope-manager/dist
+2.2M    node_modules/@typescript-eslint/scope-manager
+2.2M    node_modules/@tanstack/query-core/build
+2.2M    node_modules/rxjs/dist/cjs
+2.2M    node_modules/@microsoft/eslint-plugin-sdl/node_modules/eslint-plugin-react
+2.2M    node_modules/@grpc/grpc-js/build/src
+2.2M    node_modules/@grpc/grpc-js/build
+2.2M    node_modules/@anthropic-ai/sdk/node_modules/@types/node
+2.2M    node_modules/@anthropic-ai/sdk/node_modules/@types
+2.1M    node_modules/three/src/renderers
+2.1M    node_modules/@tailwindcss/node/node_modules/jiti/dist
+2.1M    node_modules/@tailwindcss/node/node_modules/jiti
+2.1M    node_modules/rxjs/dist/types
+2.1M    node_modules/rxjs/dist/esm5
+2.1M    node_modules/rxjs/dist/esm
+2.1M    node_modules/rxjs/dist/cjs/internal
+2.1M    node_modules/@microsoft/eslint-plugin-sdl/node_modules/eslint-plugin-react/lib
+2.1M    node_modules/eslint-plugin-react/lib
+2.1M    node_modules/drizzle-orm/mysql-core
+2.0M    node_modules/rxjs/dist/types/internal
+2.0M    node_modules/rxjs/dist/esm/internal
+2.0M    node_modules/rxjs/dist/esm5/internal
+2.0M    node_modules/react-dom/umd
+2.0M    node_modules/playwright-core/lib/server
+2.0M    node_modules/drizzle-orm/singlestore-core
+2.0M    node_modules/better-sqlite3/build/Release
+2.0M    node_modules/better-sqlite3/build
+2.0M    node_modules/@babel/parser
+2.0M    node_modules/@asamuzakjp/css-color/dist
+1.9M    node_modules/react-hook-form/dist
+1.9M    node_modules/react-hook-form
+1.9M    node_modules/jiti/dist
+1.9M    node_modules/jiti
+1.9M    node_modules/es5-ext
+1.9M    node_modules/@babel/parser/lib
+1.8M    node_modules/three/examples/fonts/droid
+1.8M    node_modules/react-icons/io5
+1.8M    node_modules/react-icons/bi
+1.8M    node_modules/openai/src
+1.8M    node_modules/@hookform/resolvers
+1.8M    node_modules/@hookform
+1.8M    node_modules/google-gax/node_modules
+1.8M    node_modules/axios/dist
+1.7M    node_modules/three/examples/jsm/libs/draco/gltf
+1.7M    node_modules/react-icons/lu
+1.7M    node_modules/playwright-core/types
+1.7M    node_modules/pdf-parse/lib/pdf.js/v1.9.426/web/cmaps
+1.7M    node_modules/pdf-parse/lib/pdf.js/v1.10.88/web/cmaps
+1.7M    node_modules/@microsoft/eslint-plugin-sdl/node_modules/eslint-plugin-react/lib/rules
+1.7M    node_modules/lodash/fp
+1.7M    node_modules/eslint-plugin-react/lib/rules
+1.7M    node_modules/@eslint
+1.7M    node_modules/bson/lib
+1.7M    client/src/assets
+1.6M    server
+1.6M    node_modules/@tanstack/react-query
+1.6M    node_modules/sucrase/dist
+1.6M    node_modules/sucrase
+1.6M    node_modules/playwright-core/lib/vite/traceViewer
+1.6M    node_modules/mongodb/src
+1.6M    node_modules/framer-motion/dist/es
+1.6M    node_modules/drizzle-orm/sqlite-core
+1.6M    node_modules/caniuse-lite/data/regions
+1.6M    node_modules/@babel/helpers/lib
+1.6M    node_modules/@babel/helpers
+1.5M    node_modules/@typescript-eslint/scope-manager/dist/lib
+1.5M    node_modules/three/src/nodes
+1.5M    node_modules/react-icons/ai
+1.5M    node_modules/react-day-picker
+1.5M    node_modules/gel
+1.4M    node_modules/@types/three/examples/jsm
+1.4M    node_modules/@types/three/examples
+1.4M    node_modules/@tanstack/react-query/build
+1.4M    node_modules/rxjs/src/internal
+1.4M    node_modules/rxjs/src
+1.4M    node_modules/playwright/lib/transform
+1.4M    node_modules/path-scurry
+1.3M    node_modules/yaml
+1.3M    node_modules/victory-vendor
+1.3M    node_modules/three/examples/jsm/loaders
+1.3M    node_modules/react-icons/hi2
+1.3M    node_modules/openai/_vendor/zod-to-json-schema
+1.3M    node_modules/openai/_vendor
+1.3M    node_modules/google-gax/build/protos/google
+1.3M    node_modules/eslint-plugin-n
+1.3M    node_modules/eslint-plugin-es-x/lib
+1.3M    node_modules/eslint-plugin-es-x
+1.3M    node_modules/@babel/helpers/lib/helpers
+1.2M    server/services
+1.2M    node_modules/victory-vendor/lib-vendor
+1.2M    node_modules/@tanstack/query-core/build/legacy
+1.2M    node_modules/rxjs/dist/bundles
+1.2M    node_modules/rollup/dist/shared
+1.2M    node_modules/rollup/dist/es/shared
+1.2M    node_modules/rollup/dist/es
+1.2M    node_modules/playwright-core/lib/vite/traceViewer/assets
+1.2M    node_modules/openai/src/resources
+1.2M    node_modules/openai/resources/beta
+1.2M    node_modules/framer-motion/dist/cjs
+1.2M    node_modules/es-abstract/2025
+1.2M    node_modules/es-abstract/2024
+1.2M    node_modules/dom-helpers
+1.2M    node_modules/csstype
+1.1M    node_modules/@typescript-eslint/typescript-estree
+1.1M    node_modules/@tanstack/query-core/build/modern
+1.1M    node_modules/recharts/lib
+1.1M    node_modules/react-resizable-panels/dist
+1.1M    node_modules/react-resizable-panels
+1.1M    node_modules/react-icons/gr
+1.1M    node_modules/react-icons/di
+1.1M    node_modules/react-icons/cg
+1.1M    node_modules/@google-ai/generativelanguage/build/src/v1beta
+1.1M    node_modules/esquery
+1.1M    node_modules/es-abstract/2023
+1.1M    node_modules/es-abstract/2022
+1.1M    node_modules/drizzle-orm/pg-core/columns
+1.1M    node_modules/@babel/runtime
+1.1M    node_modules/@babel/core
+1.1M    node_modules/ajv
+~/workspace$ # Replace "FILENAME" with actual large file names you find
+split -b 45M FILENAME FILENAME.part
+split: cannot open 'FILENAME' for reading: No such file or directory
+~/workspace$ # Create a new orphan branch (no history)
+git checkout --orphan clean-upload
+git add .
+git commit -m "Clean SOPGRID upload with enhanced input validation and darkened UI"
+git push -u origin clean-upload
+Switched to a new branch 'clean-upload'
+[clean-upload (root-commit) fd2db95] Clean SOPGRID upload with enhanced input validation and darkened UI
+ 276 files changed, 78494 insertions(+)
+ create mode 100644 .github/workflows/ci.yml
+ create mode 100644 .gitignore
+ create mode 100644 .prettierignore
+ create mode 100644 .prettierrc
+ create mode 100644 .replit
+ create mode 100644 README.md
+ create mode 100644 attached_assets/Pasted--Clean-rags-Safety-glasses-and-gloves-Step-by-Step-Procedure-1-Safety-First-Par-1756598636930_1756598636931.txt
+ create mode 100644 attached_assets/Pasted--rest-express-1-0-0-dev-NODE-ENV-development-tsx-server-index-ts-FORCING-MongoDB-DATABASE-US-1756523325464_1756523325465.txt
+ create mode 100644 attached_assets/Pasted-Got-it-Here-s-exactly-how-I-built-that-trade-logic-file-before-and-where-to-mine-the-source-truth-1756512985008_1756512985009.txt
+ create mode 100644 attached_assets/Pasted-Got-it-Here-s-exactly-how-I-built-that-trade-logic-file-before-and-where-to-mine-the-source-truth-1756513104370_1756513104371.txt
+ create mode 100644 attached_assets/Pasted-Got-it-Here-s-the-straight-read-Verdict-Not-safety-verified-yet-The-procedure-is-solid-mechanic-1756421234550_1756421234554.txt
+ create mode 100644 attached_assets/Pasted-Replacing-a-single-zone-Furrion-13-5k-BTU-Cool-Only-A-C-unit-involves-several-steps-requiring-atten-1756503116039_1756503116040.txt
+ create mode 100644 attached_assets/Pasted-SOP-TITLE-Lippert-3-200-lb-Tandem-Axle-Annual-Bearing-Pack-Suspension-Inspection-and-Wet-Bolt-Lu-1756502470479_1756502470480.txt
+ create mode 100644 attached_assets/Pasted-SOP-TITLE-Lippert-3-200-lb-Tandem-Axle-Annual-Bearing-Pack-Suspension-Inspection-and-Wet-Bolt-Lu-1756599054800_1756599054800.txt
+ create mode 100644 attached_assets/Pasted-Top-free-online-learning-platforms-OSHAcademy-This-training-provider-offers-100-free-access-to-its-1756512375360_1756512375360.txt
+ create mode 100644 attached_assets/Pasted-Troubleshoot-Connection-Issues-This-page-outlines-common-connection-issues-and-possible-resolution-1756567460753_1756567460754.txt
+ create mode 100644 attached_assets/Pasted-Troubleshoot-Connection-Issues-This-page-outlines-common-connection-issues-and-possible-resolution-1756567463912_1756567463912.txt
+ create mode 100644 attached_assets/Pasted-You-4-12-01-PM-3200lbs-Lippert-axle-bearing-pack-and-annual-maintenance-for-the-tandem-axle-suspen-1756502087901_1756502087904.txt
+ create mode 100644 attached_assets/Pasted-You-4-45-39-PM-axle-lippert-3200lbs-backing-plate-replacement-SG-SOPGRID-Assistant-4-45-56-PM-1756504065359_1756504065359.txt
+ create mode 100644 attached_assets/Pasted-You-4-45-39-PM-axle-lippert-3200lbs-backing-plate-replacement-SG-SOPGRID-Assistant-4-45-56-PM-1756504138308_1756504138309.txt
+ create mode 100644 attached_assets/generated_images/Alternative_SOPGRID_logo_377f1afa.png
+ create mode 100644 attached_assets/generated_images/Better_SOPGRID_logo_design_14765f7f.png
+ create mode 100644 attached_assets/generated_images/Dream_tech_shop_workspace_563b17ee.png
+ create mode 100644 attached_assets/generated_images/Generic_dream_tech_shop_c0c3ddc0.png
+ create mode 100644 attached_assets/generated_images/ISC_company_logo_e297f52b.png
+ create mode 100644 attached_assets/generated_images/ISC_neon_teal_logo_1c86b64c.png
+ create mode 100644 attached_assets/generated_images/ISC_neon_text_only_d48fd1de.png
+ create mode 100644 attached_assets/generated_images/Multi-trade_shop_background_bd64ec40.png
+ create mode 100644 attached_assets/generated_images/Professional_shop_bay_background_b4ebaf5d.png
+ create mode 100644 attached_assets/generated_images/Purple_toolbox_shop_background_b4a533dc.png
+ create mode 100644 attached_assets/generated_images/SOPGRID_company_logo_a6256a1b.png
+ create mode 100644 attached_assets/generated_images/SOPGRID_silver_blue_logo_8a4cd5a3.png
+ create mode 100644 attached_assets/generated_images/SOPGRID_text_logo_only_2f343ebb.png
+ create mode 100644 attached_assets/generated_images/Shop_with_purple_ISC_toolbox_2da482ab.png
+ create mode 100644 attached_assets/image_1756429544289.png
+ create mode 100644 attached_assets/image_1756517778971.png
+ create mode 100644 attached_assets/image_1756519360653.png
+ create mode 100644 attached_assets/image_1756519372850.png
+ create mode 100644 attached_assets/image_1756523335108.png
+ create mode 100644 attached_assets/image_1756525684194.png
+ create mode 100644 attached_assets/image_1756526104201.png
+ create mode 100644 attached_assets/image_1756527302966.png
+ create mode 100644 attached_assets/image_1756528139285.png
+ create mode 100644 attached_assets/image_1756528148488.png
+ create mode 100644 attached_assets/image_1756528420166.png
+ create mode 100644 attached_assets/image_1756528426626.png
+ create mode 100644 attached_assets/image_1756528431285.png
+ create mode 100644 attached_assets/image_1756528442406.png
+ create mode 100644 attached_assets/image_1756528926185.png
+ create mode 100644 attached_assets/image_1756531530279.png
+ create mode 100644 attached_assets/image_1756572969227.png
+ create mode 100644 attached_assets/image_1756573531664.png
+ create mode 100644 attached_assets/image_1756573544760.png
+ create mode 100644 attached_assets/image_1756657580464.png
+ create mode 100644 attached_assets/image_1756657908536.png
+ create mode 100644 attached_assets/image_1756661574848.png
+ create mode 100644 attached_assets/image_1756682439294.png
+ create mode 100644 client/index.html
+ create mode 100644 client/public/RV_service_workshop_background_46758a74.png
+ create mode 100644 client/public/arbitration-bg.png
+ create mode 100644 client/public/chat-bg.png
+ create mode 100644 client/public/dashboard-bg.png
+ create mode 100644 client/public/document-bg.png
+ create mode 100644 client/public/login-bg.png
+ create mode 100644 client/public/prompts/workplace-image-prompt.txt
+ create mode 100644 client/public/rv-background.png
+ create mode 100644 client/public/vault-bg.png
+ create mode 100644 client/src/App.tsx
+ create mode 100644 client/src/assets/bg.png
+ create mode 100644 client/src/components/advanced-search.tsx
+ create mode 100644 client/src/components/agent-orchestration.tsx
+ create mode 100644 client/src/components/arbitration-engine.tsx
+ create mode 100644 client/src/components/compliance-monitoring.tsx
+ create mode 100644 client/src/components/credential-vault.tsx
+ create mode 100644 client/src/components/enhanced-agent-orchestration.tsx
+ create mode 100644 client/src/components/enterprise-os-dashboard.tsx
+ create mode 100644 client/src/components/industry-showcase.tsx
+ create mode 100644 client/src/components/landing-page.tsx
+ create mode 100644 client/src/components/oracle-interface.tsx
+ create mode 100644 client/src/components/protected-route.tsx
+ create mode 100644 client/src/components/rvia-knowledge-manager.tsx
+ create mode 100644 client/src/components/sopgrid-chat.tsx
+ create mode 100644 client/src/components/sopgrid-header.tsx
+ create mode 100644 client/src/components/system-health-sine.tsx
+ create mode 100644 client/src/components/system-health.tsx
+ create mode 100644 client/src/components/system-snapshots.tsx
+ create mode 100644 client/src/components/ui/accordion.tsx
+ create mode 100644 client/src/components/ui/alert-dialog.tsx
+ create mode 100644 client/src/components/ui/alert.tsx
+ create mode 100644 client/src/components/ui/aspect-ratio.tsx
+ create mode 100644 client/src/components/ui/avatar.tsx
+ create mode 100644 client/src/components/ui/badge.tsx
+ create mode 100644 client/src/components/ui/breadcrumb.tsx
+ create mode 100644 client/src/components/ui/button.tsx
+ create mode 100644 client/src/components/ui/calendar.tsx
+ create mode 100644 client/src/components/ui/card.tsx
+ create mode 100644 client/src/components/ui/carousel.tsx
+ create mode 100644 client/src/components/ui/chart.tsx
+ create mode 100644 client/src/components/ui/checkbox.tsx
+ create mode 100644 client/src/components/ui/collapsible.tsx
+ create mode 100644 client/src/components/ui/command.tsx
+ create mode 100644 client/src/components/ui/context-menu.tsx
+ create mode 100644 client/src/components/ui/dialog.tsx
+ create mode 100644 client/src/components/ui/drawer.tsx
+ create mode 100644 client/src/components/ui/dropdown-menu.tsx
+ create mode 100644 client/src/components/ui/form.tsx
+ create mode 100644 client/src/components/ui/hover-card.tsx
+ create mode 100644 client/src/components/ui/input-otp.tsx
+ create mode 100644 client/src/components/ui/input.tsx
+ create mode 100644 client/src/components/ui/label.tsx
+ create mode 100644 client/src/components/ui/menubar.tsx
+ create mode 100644 client/src/components/ui/navigation-menu.tsx
+ create mode 100644 client/src/components/ui/pagination.tsx
+ create mode 100644 client/src/components/ui/popover.tsx
+ create mode 100644 client/src/components/ui/progress.tsx
+ create mode 100644 client/src/components/ui/radio-group.tsx
+ create mode 100644 client/src/components/ui/resizable.tsx
+ create mode 100644 client/src/components/ui/scroll-area.tsx
+ create mode 100644 client/src/components/ui/select.tsx
+ create mode 100644 client/src/components/ui/separator.tsx
+ create mode 100644 client/src/components/ui/sheet.tsx
+ create mode 100644 client/src/components/ui/sidebar.tsx
+ create mode 100644 client/src/components/ui/skeleton.tsx
+ create mode 100644 client/src/components/ui/slider.tsx
+ create mode 100644 client/src/components/ui/switch.tsx
+ create mode 100644 client/src/components/ui/table.tsx
+ create mode 100644 client/src/components/ui/tabs.tsx
+ create mode 100644 client/src/components/ui/textarea.tsx
+ create mode 100644 client/src/components/ui/toast.tsx
+ create mode 100644 client/src/components/ui/toaster.tsx
+ create mode 100644 client/src/components/ui/toggle-group.tsx
+ create mode 100644 client/src/components/ui/toggle.tsx
+ create mode 100644 client/src/components/ui/tooltip.tsx
+ create mode 100644 client/src/contexts/auth-context.tsx
+ create mode 100644 client/src/hooks/use-mobile.tsx
+ create mode 100644 client/src/hooks/use-toast.ts
+ create mode 100644 client/src/hooks/useOsAgent.ts
+ create mode 100644 client/src/hooks/useWebSocketReconnect.ts
+ create mode 100644 client/src/index.css
+ create mode 100644 client/src/lib/queryClient.ts
+ create mode 100644 client/src/lib/utils.ts
+ create mode 100644 client/src/main.tsx
+ create mode 100644 client/src/pages/BulkGeneration.tsx
+ create mode 100644 client/src/pages/HITLSystem.tsx
+ create mode 100644 client/src/pages/MultiAgentSOP.tsx
+ create mode 100644 client/src/pages/TechnicianChat.tsx
+ create mode 100644 client/src/pages/arbitration.tsx
+ create mode 100644 client/src/pages/credentials-vault.tsx
+ create mode 100644 client/src/pages/login.tsx
+ create mode 100644 client/src/pages/new-dashboard.tsx
+ create mode 100644 client/src/pages/not-found.tsx
+ create mode 100644 client/src/pages/rvia-training.tsx
+ create mode 100644 client/src/pages/snapshots.tsx
+ create mode 100644 client/src/pages/sop-approval.tsx
+ create mode 100644 client/src/pages/sop-generator.tsx
+ create mode 100644 client/src/pages/sop-training.tsx
+ create mode 100644 client/src/pages/sop-viewer.tsx
+ create mode 100644 client/src/pages/troubleshooting.tsx
+ create mode 100644 client/src/pages/user-management-new.tsx
+ create mode 100644 client/src/pages/web-crawler.tsx
+ create mode 100644 components.json
+ create mode 100644 cookies.txt
+ create mode 100644 data/ledger.jsonl
+ create mode 100644 drizzle.config.ts
+ create mode 100644 eslint.config.js
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ create mode 100644 postcss.config.js
+ create mode 100755 rejoin-files.sh
+ create mode 100644 replit.md
+ create mode 100644 server/config/deployment-config.ts
+ create mode 100644 server/db.ts
+ create mode 100644 server/index.ts
+ create mode 100644 server/middleware/rate-limiter.ts
+ create mode 100644 server/middleware/role-guard.ts
+ create mode 100644 server/middleware/safety-logic-validator.ts
+ create mode 100644 server/routes.ts
+ create mode 100644 server/routes/ai-itl-routes.ts
+ create mode 100644 server/routes/os-agent.ts
+ create mode 100644 server/routes/technician-chat.ts
+ create mode 100644 server/scripts/auto-vectorize-crawler.ts
+ create mode 100644 server/scripts/deduplicate-and-vectorize.ts
+ create mode 100644 server/scripts/reset-and-vectorize-all.ts
+ create mode 100644 server/scripts/reset-and-vectorize-lci.ts
+ create mode 100644 server/scripts/search-all-collections.ts
+ create mode 100644 server/scripts/test-qdrant-direct.ts
+ create mode 100644 server/scripts/vectorize-all-lci.ts
+ create mode 100644 server/scripts/vectorize-crawled-docs.ts
+ create mode 100644 server/scripts/vectorize-existing.ts
+ create mode 100644 server/scripts/vectorize-lci-batch.ts
+ create mode 100644 server/services/advanced-contradiction-detector.ts
+ create mode 100644 server/services/agent-load-balancer.ts
+ create mode 100644 server/services/ai-itl-information-gatherer.ts
+ create mode 100644 server/services/ai-quality-assurance.ts
+ create mode 100644 server/services/ai-router.ts
+ create mode 100644 server/services/anthropic-service.ts
+ create mode 100644 server/services/ar-training-system.ts
+ create mode 100644 server/services/auto-sop-bulk-generator.ts
+ create mode 100644 server/services/auto-sop-generator.ts
+ create mode 100644 server/services/auto-vectorizer-service.ts
+ create mode 100644 server/services/business-intelligence-dashboard.ts
+ create mode 100644 server/services/business-intelligence.ts
+ create mode 100644 server/services/cache-manager.ts
+ create mode 100644 server/services/chat-service.ts
+ create mode 100644 server/services/cognitive-os-overlay.ts
+ create mode 100644 server/services/compliance-checker.ts
+ create mode 100644 server/services/comprehensive-technical-knowledge.ts
+ create mode 100644 server/services/contradiction-detection-enhanced.ts
+ create mode 100644 server/services/contradiction-scorer.ts
+ create mode 100644 server/services/database-manager.ts
+ create mode 100644 server/services/document-processor.ts
+ create mode 100644 server/services/enhanced-agents-fixed.ts
+ create mode 100644 server/services/enhanced-evidence-ledger.ts
+ create mode 100644 server/services/enhanced-os-agent.ts
+ create mode 100644 server/services/enhanced-safety-sop-validator.ts
+ create mode 100644 server/services/enhanced-sop-generator.ts
+ create mode 100644 server/services/error-handler.ts
+ create mode 100644 server/services/evidence-ledger-enhanced.ts
+ create mode 100644 server/services/evidence-ledger.ts
+ create mode 100644 server/services/fundamental-laws.ts
+ create mode 100644 server/services/gemini-service.ts
+ create mode 100644 server/services/hitl-system.ts
+ create mode 100644 server/services/input-validation-service.ts
+ create mode 100644 server/services/input-validator.ts
+ create mode 100644 server/services/interactive-troubleshooting.ts
+ create mode 100644 server/services/manual-knowledge-extractor.ts
+ create mode 100644 server/services/manual-lookup-service.ts
+ create mode 100644 server/services/manual-validator.ts
+ create mode 100644 server/services/memory-efficient-sop-generator.ts
+ create mode 100644 server/services/mesh-rotor-system.ts
+ create mode 100644 server/services/mongodb-storage-stubs.ts
+ create mode 100644 server/services/mongodb-storage.ts
+ create mode 100644 server/services/multi-agent-orchestrator.ts
+ create mode 100644 server/services/multi-agent-sop-generator.ts
+ create mode 100644 server/services/multi-jurisdiction-support.ts
+ create mode 100644 server/services/multi-llm-consultant.ts
+ create mode 100644 server/services/nli-contradiction-scorer.ts
+ create mode 100644 server/services/ollama-service.ts
+ create mode 100644 server/services/openai-service.ts
+ create mode 100644 server/services/os-agent.ts
+ create mode 100644 server/services/os-overlay-architect.ts
+ create mode 100644 server/services/procedure-sequence-validator.ts
+ create mode 100644 server/services/qdrant-client.ts
+ create mode 100644 server/services/rbac-security.ts
+ create mode 100644 server/services/real-time-manual-processor.ts
+ create mode 100644 server/services/redis-queue-manager.ts
+ create mode 100644 server/services/reg-rules/nfpa-70e-electrical-safety.ts
+ create mode 100644 server/services/reg-rules/osha-1910-lockout-tagout.ts
+ create mode 100644 server/services/regulatory-data-service.ts
+ create mode 100644 server/services/response-optimizer.ts
+ create mode 100644 server/services/response-validator.ts
+ create mode 100644 server/services/rv-equipment-validator.ts
+ create mode 100644 server/services/rv-partfinder-crawler.ts
+ create mode 100644 server/services/rv-trade-knowledge-service.ts
+ create mode 100644 server/services/rvia-document-ingester.ts
+ create mode 100644 server/services/smart-sop-retrieval.ts
+ create mode 100644 server/services/tech-level-prompts.ts
+ create mode 100644 server/services/technician-llm.ts
+ create mode 100644 server/services/test-orchestrator.ts
+ create mode 100644 server/services/troubleshooting-tree.ts
+ create mode 100644 server/services/unified-chat-troubleshooter.ts
+ create mode 100644 server/services/unified-system-orchestrator.ts
+ create mode 100644 server/services/vectorizer.ts
+ create mode 100644 server/services/web-crawler.ts
+ create mode 100644 server/src/types/core.ts
+ create mode 100644 server/storage.ts
+ create mode 100644 server/utils/auth.ts
+ create mode 100644 server/vite.ts
+ create mode 100644 server/websocket.ts
+ create mode 100644 shared/schema.ts
+ create mode 100644 tailwind.config.ts
+ create mode 100644 test-search.ts
+ create mode 100644 test-specific-search.ts
+ create mode 100644 test/data/05-versions-space.pdf
+ create mode 100644 tsconfig.json
+ create mode 100644 vite.config.ts
+Enumerating objects: 297, done.
+Counting objects: 100% (297/297), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (281/281), done.
+Writing objects: 100% (297/297), 44.60 MiB | 5.68 MiB/s, done.
+Total 297 (delta 10), reused 105 (delta 3), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (10/10), done.
+To https://github.com/lucasr610/SopGrid
+ * [new branch]      clean-upload -> clean-upload
+branch 'clean-upload' set up to track 'origin/clean-upload'.
+~/workspace$ 
