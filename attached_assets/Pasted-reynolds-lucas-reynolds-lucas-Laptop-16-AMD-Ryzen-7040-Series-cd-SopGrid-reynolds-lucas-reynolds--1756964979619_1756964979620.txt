@@ -1,0 +1,45 @@
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~$ cd SopGrid
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ head -n 20 ~/SopGrid/.env
+# ================================================================
+# SOPGRID FRAMEWORK 16 ENVIRONMENT CONFIGURATION
+# Complete configuration for all services and integrations
+# ================================================================
+
+# ================================================================
+# AI SERVICE API KEYS (REQUIRED)
+# ================================================================
+OPENAI_API_KEY=sk-your-openai-api-key-here
+ANTHROPIC_API_KEY=sk-ant-your-anthropic-api-key-here
+GEMINI_API_KEY=your-gemini-api-key-here
+
+# ================================================================
+# DATABASE CONFIGURATION
+# ================================================================
+# PostgreSQL (Primary Database)
+DATABASE_URL=postgresql://username:password@localhost:5432/sopgrid
+PGDATABASE=sopgrid
+PGHOST=localhost
+PGPASSWORD=your-postgres-password
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ cat <<'EOF' > ~/SopGrid/.env
+# SOPGRID FRAMEWORK 16 - REAL CONFIGURATION
+# Generated from your Replit environment
+
+# AI Service API Keys (YOUR REAL KEYS)
+OPENAI_API_KEY=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
+ANTHROPIC_API_KEY=sk-ant-api03-JQS1uo1sT9D-y5JJGfBN8u0FCqy5HgqVj1PmHgJDxcaKjlYY7rWqOOK3jm10EQiVOJZdaUlvCKGRNhL3oC0F-Q
+GEMINI_API_KEY=AIzaSyAUSHeXj8oAOOJo-2YBDQxOOY6xpR5fGjA
+
+# Database Configuration (YOUR REAL DATABASE)
+DATABASE_URL=postgresql://sopgrid_owner:qGNvKgE3TA72@ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech/sopgrid?sslmode=require
+PGDATABASE=sopgrid
+PGHOST=ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech
+PGPASSWORD=qGNvKgE3TA72
+PGPORT=5432
+PGUSER=sopgrid_owner
+
+# MongoDB Configuration
+MONGODB_URI=mongodb+srv://ai-sop-dev.nezgetk.mongodb.net/?authSource=%24externalEOF_ACCELERATION=truezationsrue.35x,html,xml,json923080.eu-west-2-0.aws.cloud.qd
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ cd ~/SopGrid
+./start-sopgrid.cmd
+bash: ./start-sopgrid.cmd: Permission denied
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ 

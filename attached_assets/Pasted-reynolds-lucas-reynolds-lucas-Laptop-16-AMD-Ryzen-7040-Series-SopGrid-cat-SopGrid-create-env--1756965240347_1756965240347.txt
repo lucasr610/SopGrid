@@ -1,0 +1,51 @@
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ cat > ~/SopGrid/create-env.sh << 'SCRIPT_END' && chmod +x ~/SopGrid/create-env.sh && ~/SopGrid/create-env.sh
+#!/bin/bash
+cat > ~/SopGrid/.env << 'ENV_END'
+# SOPGRID FRAMEWORK 16 - REAL CONFIGURATION
+OPENAI_API_KEY=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
+ANTHROPIC_API_KEY=sk-ant-api03-JQS1uo1sT9D-y5JJGfBN8u0FCqy5HgqVj1PmHgJDxcaKjlYY7rWqOOK3jm10EQiVOJZdaUlvCKGRNhL3oC0F-Q
+GEMINI_API_KEY=AIzaSyAUSHeXj8oAOOJo-2YBDQxOOY6xpR5fGjA
+DATABASE_URL=postgresql://sopgrid_owner:qGNvKgE3TA72@ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech/sopgrid?sslmode=require
+PGDATABASE=sopgrid
+PGHOST=ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech
+PGPASSWORD=qGNvKgE3TA72
+PGPORT=5432
+PGUSER=sopgrid_owner
+MONGODB_URI=mongodb+srv://ai-sop-dev.nezgetk.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority&appName=ai-sop-dev
+RVPARTFINDER_COMPANY_ID=4917
+RVPARTFINDER_PIN=20085
+RVPARTFINDER_USER_ID=30163
+QDRANT_URL=https://7d13f888-6a05-45a2-b770-40bd1edd67ba.eu-west-2-0.aws.cloud.qdSCRIPT_ENDenv file created successfully!"xml,json923080
+✅ .env file created successfully!
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ # Check if .env was created correctly
+head -n 10 ~/SopGrid/.env
+
+# If it looks good (should show real API keys), run SOPGRID:
+cd ~/SopGrid && npm run dev
+# SOPGRID FRAMEWORK 16 - REAL CONFIGURATION
+OPENAI_API_KEY=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
+ANTHROPIC_API_KEY=sk-ant-api03-JQS1uo1sT9D-y5JJGfBN8u0FCqy5HgqVj1PmHgJDxcaKjlYY7rWqOOK3jm10EQiVOJZdaUlvCKGRNhL3oC0F-Q
+GEMINI_API_KEY=AIzaSyAUSHeXj8oAOOJo-2YBDQxOOY6xpR5fGjA
+DATABASE_URL=postgresql://sopgrid_owner:qGNvKgE3TA72@ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech/sopgrid?sslmode=require
+PGDATABASE=sopgrid
+PGHOST=ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech
+PGPASSWORD=qGNvKgE3TA72
+PGPORT=5432
+PGUSER=sopgrid_owner
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+/home/reynolds-lucas/SopGrid/server/db.ts:9
+  throw new Error(
+        ^
+
+
+Error: DATABASE_URL must be set. Did you forget to provision a database?
+    at <anonymous> (/home/reynolds-lucas/SopGrid/server/db.ts:9:9)
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.18.0
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ 

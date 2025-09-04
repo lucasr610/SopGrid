@@ -1,0 +1,418 @@
+# MongoDB Configuration
+MONGODB_URI=mongodb+srv://ai-sop-dev.nezgetk.mongodb.net/?authSource=%24externalnpm run devdPGRID with the correct Linux commandn923080.eu-west-2-0.aws.cloud.qd
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+/home/reynolds-lucas/SopGrid/server/db.ts:9
+  throw new Error(
+        ^
+
+
+Error: DATABASE_URL must be set. Did you forget to provision a database?
+    at <anonymous> (/home/reynolds-lucas/SopGrid/server/db.ts:9:9)
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.18.0
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ ^C
+: command not found
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ cat > ~/SopGrid/create-env.sh << 'SCRIPT_END' && chmod +x ~/SopGrid/create-env.sh && ~/SopGrid/create-env.sh
+#!/bin/bash
+cat > ~/SopGrid/.env << 'ENV_END'
+# SOPGRID FRAMEWORK 16 - REAL CONFIGURATION
+OPENAI_API_KEY=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
+ANTHROPIC_API_KEY=sk-ant-api03-JQS1uo1sT9D-y5JJGfBN8u0FCqy5HgqVj1PmHgJDxcaKjlYY7rWqOOK3jm10EQiVOJZdaUlvCKGRNhL3oC0F-Q
+GEMINI_API_KEY=AIzaSyAUSHeXj8oAOOJo-2YBDQxOOY6xpR5fGjA
+DATABASE_URL=postgresql://sopgrid_owner:qGNvKgE3TA72@ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech/sopgrid?sslmode=require
+PGDATABASE=sopgrid
+PGHOST=ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech
+PGPASSWORD=qGNvKgE3TA72
+PGPORT=5432
+PGUSER=sopgrid_owner
+MONGODB_URI=mongodb+srv://ai-sop-dev.nezgetk.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority&appName=ai-sop-dev
+RVPARTFINDER_COMPANY_ID=4917
+RVPARTFINDER_PIN=20085
+RVPARTFINDER_USER_ID=30163
+QDRANT_URL=https://7d13f888-6a05-45a2-b770-40bd1edd67ba.eu-west-2-0.aws.cloud.qdSCRIPT_ENDenv file created successfully!"xml,json923080
+✅ .env file created successfully!
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ # Check if .env was created correctly
+head -n 10 ~/SopGrid/.env
+
+# If it looks good (should show real API keys), run SOPGRID:
+cd ~/SopGrid && npm run dev
+# SOPGRID FRAMEWORK 16 - REAL CONFIGURATION
+OPENAI_API_KEY=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
+ANTHROPIC_API_KEY=sk-ant-api03-JQS1uo1sT9D-y5JJGfBN8u0FCqy5HgqVj1PmHgJDxcaKjlYY7rWqOOK3jm10EQiVOJZdaUlvCKGRNhL3oC0F-Q
+GEMINI_API_KEY=AIzaSyAUSHeXj8oAOOJo-2YBDQxOOY6xpR5fGjA
+DATABASE_URL=postgresql://sopgrid_owner:qGNvKgE3TA72@ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech/sopgrid?sslmode=require
+PGDATABASE=sopgrid
+PGHOST=ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech
+PGPASSWORD=qGNvKgE3TA72
+PGPORT=5432
+PGUSER=sopgrid_owner
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+/home/reynolds-lucas/SopGrid/server/db.ts:9
+  throw new Error(
+        ^
+
+
+Error: DATABASE_URL must be set. Did you forget to provision a database?
+    at <anonymous> (/home/reynolds-lucas/SopGrid/server/db.ts:9:9)
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.18.0
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ # First, remove the corrupted .env
+rm ~/SopGrid/.env
+
+# Now create a new clean .env using printf (more reliable than cat):
+printf '%s\n' \
+'# SOPGRID FRAMEWORK 16 - REAL CONFIGURATION' \
+'OPENAI_API_KEY=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' \
+'ANTHROPIC_API_KEY=sk-ant-api03-JQS1uo1sT9D-y5JJGfBN8u0FCqy5HgqVj1PmHgJDxcaKjlYY7rWqOOK3jm10EQiVOJZdaUlvCKGRNhL3oC0F-Q' \
+'GEMINI_API_KEY=AIzaSyAUSHeXj8oAOOJo-2YBDQxOOY6xpR5fGjA' \
+'DATABASE_URL=postgresql://sopgrid_owner:qGNvKgE3TA72@ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech/sopgrid?sslmode=require' \
+'PGDATABASE=sopgrid' \
+'PGHOST=ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech' \
+'PGPASSWORD=qGNvKgE3TA72' \
+'PGPORT=5432' \
+'PGUSER=sopgrid_owner' \
+'MONGODB_URI=mongodb+srv://ai-sop-dev.nezgetk.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority&appName=ai-sop-dev' \
+'RVPARTFINDER_COMPANY_ID=4917' \
+'RVPARTFINDER_PIN=20085' \
+cd ~/SopGrid && npm run dev/.env
+Checking .env file:
+DATABASE_URL=postgresql://sopgrid_owner:qGNvKgE3TA72@ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech/sopgrid?sslmode=require
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+/home/reynolds-lucas/SopGrid/server/db.ts:9
+  throw new Error(
+        ^
+
+
+Error: DATABASE_URL must be set. Did you forget to provision a database?
+    at <anonymous> (/home/reynolds-lucas/SopGrid/server/db.ts:9:9)
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.18.0
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ # Load the .env file and run the app
+cd ~/SopGrid
+source .env && npm run dev
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+/home/reynolds-lucas/SopGrid/server/db.ts:9
+  throw new Error(
+        ^
+
+
+Error: DATABASE_URL must be set. Did you forget to provision a database?
+    at <anonymous> (/home/reynolds-lucas/SopGrid/server/db.ts:9:9)
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:647:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.18.0
+[1]   Done                    MONGODB_URI=mongodb+srv://ai-sop-dev.nezgetk.mongodb.net/?authSource=%24external
+[2]   Done                    authMechanism=MONGODB-X509
+[3]-  Done                    retryWrites=true
+[4]+  Done                    w=majority
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ cd ~/SopGrid
+DATABASE_URL="postgresql://sopgrid_owner:qGNvKgE3TA72@ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech/sopgrid?sslmode=require" \
+OPENAI_API_KEY="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" \
+ANTHROPIC_API_KEY="sk-ant-api03-JQS1uo1sT9D-y5JJGfBN8u0FCqy5HgqVj1PmHgJDxcaKjlYY7rWqOOK3jm10EQiVOJZdaUlvCKGRNhL3oC0F-Q" \
+GEMINI_API_KEY="AIzaSyAUSHeXj8oAOOJo-2YBDQxOOY6xpR5fGjA" \
+RVPARTFINDER_COMPANY_ID="4917" \
+RVPARTFINDER_PIN="20085" \
+RVPARTFINDER_USER_ID="30163" \
+npm run dev
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+🔧 Initializing MongoDB storage...
+🔍 Checking certificate paths...
+Testing: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem - exists: false
+Testing: /home/reynolds-lucas/SopGrid/server/certs/mongodb-x509-cert.pem - exists: false
+Testing: /home/reynolds-lucas/SopGrid/server/certs/mongodb-cert.pem - exists: false
+Testing: /home/reynolds-lucas/SopGrid/attached_assets/X509-cert-8478426727778215180_1756567311391.pem - exists: false
+Testing: /home/reynolds-lucas/SopGrid/attached_assets/X509-cert-4384401248063113710_1756539648008.pem - exists: false
+Testing: /home/reynolds-lucas/SopGrid/attached_assets/X509-cert-1242919044513325667_1756539646046.pem - exists: false
+⚠️ No MongoDB certificate found, using TLS without client cert
+🔗 Enhanced Evidence Ledger initialized with blockchain integrity
+🎓 AR Training System initialized with 4 core modules
+🌍 Multi-jurisdiction support initialized with 4 jurisdictions
+🔐 RBAC Security initialized with 5 role levels
+🔧 Ollama configured for YOUR LOCAL MODELS:
+   📦 Small (7B):  mistral:7b
+   📦 Large (14B): llama2:14b
+   🌐 Base URL:    http://localhost:11434
+⚡ To use your models, make sure Ollama is running with your specific models!
+☁️ AI Router: CLOUD MODE - Using OpenAI, Gemini, Anthropic as primary processors
+🚀 UNIFIED SOPGRID: Initializing complete system integration...
+🗄️ PostgreSQL: Connected and ready for unified operations
+🔐 CREDENTIALS: LLM API keys loaded successfully
+⚡ Fast startup mode enabled
+🔧 Configuration: COMPLIANCE_STRICT=false, NLI_REQUIRED=false
+🛡️ Applying Safety & Logic validation to critical endpoints
+🔐 Applying role-based access control to sensitive routes
+🚀 UNIFIED SOPGRID: Initializing complete system integration...
+✅ UNIFIED SOPGRID: All agents and storage systems integrated
+🤖 Agents: 0 | Storage: PostgreSQL=true
+🔧 Starting Enhanced OS Agent for autonomous system management...
+🔗 STORAGE: Connecting to all storage systems...
+🤖 AGENTS: Initializing specialized agent network...
+👁️ Eyes system registered rotor: rotor-sop_generation-1756965467806-6x7d4s7wg
+🆕 New rotor spawned: rotor-sop_generation-1756965467806-6x7d4s7wg with AI services: openai, gemini
+👁️ Eyes system registered rotor: rotor-compliance_check-1756965467806-62i6wtor1
+🆕 New rotor spawned: rotor-compliance_check-1756965467806-62i6wtor1 with AI services: anthropic, gemini
+👁️ Eyes system registered rotor: rotor-document_analysis-1756965467806-fbs790fq3
+🆕 New rotor spawned: rotor-document_analysis-1756965467806-fbs790fq3 with AI services: openai, gemini, anthropic
+👁️ Eyes system registered rotor: rotor-troubleshooting-1756965467806-uhl1p0mri
+🆕 New rotor spawned: rotor-troubleshooting-1756965467806-uhl1p0mri with AI services: openai, gemini
+⚡ Mesh Rotor System initialized with 4 base rotors (fast startup)
+🗄️ OS Agent: Database connection ready for memory offloading
+🤖 Enhanced OS Agent initialized - Monitoring disabled
+🤖 Enhanced OS Agent activated - Autonomous system resource management enabled
+📚 Loading manufacturer manual knowledge into validators...
+📚 Loading manual knowledge into validators...
+  Adding sequence: bearing_repack
+  Adding torque spec: Castle nut initial = 50 ft-lbs
+  Adding torque spec: Castle nut final = 10-15 in-lbs
+  Adding torque spec: Lug nuts = 90-120 ft-lbs
+  Adding torque spec: U-bolts = 65-85 ft-lbs
+  Adding sequence: brake_adjustment
+  Adding torque spec: Brake mounting bolts = 20-25 ft-lbs
+  Adding sequence: wet_bolt_replacement
+  Adding torque spec: Wet bolt nut = 40-50 ft-lbs
+  Adding sequence: filter_cleaning
+📚 Loading comprehensive technical knowledge...
+  Adding electrical procedure: Transfer Switch Installation
+  Adding torque spec: Main lugs (30A) = 25-30 inch-pounds
+  Adding torque spec: Ground lugs = 15-20 inch-pounds
+  Adding torque spec: Control wiring = 7-9 inch-pounds
+  Adding tool_maintenance procedure: Torque Wrench Calibration Verification
+  Adding installation procedure: Threaded Fastener Installation
+  Adding torque spec: Grade 5 bolts (1/4") = 7-9 foot-pounds
+  Adding torque spec: Grade 5 bolts (5/16") = 15-20 foot-pounds
+  Adding torque spec: Stainless steel (1/4") = 5-7 foot-pounds
+✅ Manual knowledge loaded into validators
+✅ Comprehensive technical knowledge loaded - Installation, repair, maintenance, and tool management standards ready
+✅ Manual knowledge loaded - Lippert, Dometic, and other manufacturer specs ready
+📚 Document processing available on-demand
+✅ Background: Document processing will occur on-demand only
+🚀 Auto-SOP Generator initialized with bulk processing
+🤖 Auto-SOP Generator initialized with bulk processing and revision monitoring
+⚖️ Agent Load Balancer initialized with adaptive strategies
+🤖 Technician LLM Chat Interface activated at /api/technician
+🚨 Failed to register agents in database: error: password authentication failed for user 'sopgrid_owner'
+    at file:///home/reynolds-lucas/SopGrid/node_modules/@neondatabase/serverless/index.mjs:1345:74
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NeonPreparedQuery.execute (/home/reynolds-lucas/SopGrid/node_modules/src/neon-serverless/session.ts:102:18)
+    at async UnifiedSystemOrchestrator.registerAgentsInDatabase (/home/reynolds-lucas/SopGrid/server/services/unified-system-orchestrator.ts:319:31)
+    at async UnifiedSystemOrchestrator.initializeAgents (/home/reynolds-lucas/SopGrid/server/services/unified-system-orchestrator.ts:304:7)
+    at async UnifiedSystemOrchestrator.initializeSystem (/home/reynolds-lucas/SopGrid/server/services/unified-system-orchestrator.ts:120:7) {
+  length: 76,
+  severity: 'ERROR',
+  code: 'XX000',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined
+}
+✅ AGENTS: All specialized agents initialized and coordinated
+👀 MONITORING: Intelligent monitoring - only on-demand to prevent database bloat
+✅ UNIFIED SOPGRID: System fully integrated and operational
+12:57:48 AM [express] serving on port 5000
+🔍 Checking certificate paths...
+Testing: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem - exists: false
+Testing: /home/reynolds-lucas/SopGrid/server/certs/mongodb-x509-cert.pem - exists: false
+Testing: /home/reynolds-lucas/SopGrid/server/certs/mongodb-cert.pem - exists: false
+Testing: /home/reynolds-lucas/SopGrid/attached_assets/X509-cert-8478426727778215180_1756567311391.pem - exists: false
+Testing: /home/reynolds-lucas/SopGrid/attached_assets/X509-cert-4384401248063113710_1756539648008.pem - exists: false
+Testing: /home/reynolds-lucas/SopGrid/attached_assets/X509-cert-1242919044513325667_1756539646046.pem - exists: false
+⚠️ No MongoDB certificate found, using TLS without client cert
+🤖 Starting auto-vectorization service for crawler documents...
+⚠️ MongoDB connection failed: certificate validation failed
+Failed to initialize Auto-Vectorizer Service: MongoServerError: certificate validation failed
+    at Connection.sendCommand (/home/reynolds-lucas/SopGrid/node_modules/mongodb/src/cmap/connection.ts:559:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Connection.command (/home/reynolds-lucas/SopGrid/node_modules/mongodb/src/cmap/connection.ts:633:22)
+    at async X509.auth (/home/reynolds-lucas/SopGrid/node_modules/mongodb/src/cmap/auth/x509.ts:32:5)
+    at async performInitialHandshake (/home/reynolds-lucas/SopGrid/node_modules/mongodb/src/cmap/connect.ts:164:7)
+    at async connect (/home/reynolds-lucas/SopGrid/node_modules/mongodb/src/cmap/connect.ts:43:5) {
+  errorLabelSet: Set(2) { 'HandshakeError', 'ResetPool' },
+  errorResponse: {
+    ok: 0,
+    errmsg: 'certificate validation failed',
+    code: 8000,
+    codeName: 'AtlasError'
+  },
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  connectionGeneration: 0
+}
+Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+12:58:31 AM [express] GET /api/auth/user 200 in 2ms :: {"id":"1756341735989","username":"Lucas.Reynol…
+MongoDB getDocuments error: Topology is closed
+📚 Processing 0 ingested documents for auto-SOP generation
+^[[B^C
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ # Create the certs directory on your Framework 16
+mkdir -p ~/SopGrid/server/certs/
+
+# Copy all 3 certificates from Downloads
+cp ~/Downloads/mongodb-*.pem ~/SopGrid/server/certs/
+
+# Verify they're there
+ls -la ~/SopGrid/server/certs/
+total 32
+drwxrwxr-x  2 reynolds-lucas reynolds-lucas 4096 Sep  4 01:05 .
+drwxrwxr-x 10 reynolds-lucas reynolds-lucas 4096 Sep  4 01:05 ..
+-rw-rw-r--  1 reynolds-lucas reynolds-lucas 5072 Sep  4 01:05 mongodb-cert.pem
+-rw-rw-r--  1 reynolds-lucas reynolds-lucas 5069 Sep  4 01:05 mongodb-latest.pem
+-rw-rw-r--  1 reynolds-lucas reynolds-lucas 5068 Sep  4 01:05 mongodb-x509-cert.pem
+reynolds-lucas@reynolds-lucas-Laptop-16-AMD-Ryzen-7040-Series:~/SopGrid$ # Stop current process (Ctrl+C) then restart with all keys:
+cd ~/SopGrid
+DATABASE_URL="postgresql://sopgrid_owner:qGNvKgE3TA72@ep-lucky-breeze-a5k5xqfi.us-east-2.aws.neon.tech/sopgrid?sslmode=require" \
+OPENAI_API_KEY="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" \
+ANTHROPIC_API_KEY="sk-ant-api03-JQS1uo1sT9D-y5JJGfBN8u0FCqy5HgqVj1PmHgJDxcaKjlYY7rWqOOK3jm10EQiVOJZdaUlvCKGRNhL3oC0F-Q" \
+GEMINI_API_KEY="AIzaSyAUSHeXj8oAOOJo-2YBDQxOOY6xpR5fGjA" \
+RVPARTFINDER_COMPANY_ID="4917" \
+RVPARTFINDER_PIN="20085" \
+RVPARTFINDER_USER_ID="30163" \
+npm run dev
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+🔧 Initializing MongoDB storage...
+🔍 Checking certificate paths...
+Testing: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem - exists: true
+🔑 Using MongoDB certificate: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem
+🔗 Enhanced Evidence Ledger initialized with blockchain integrity
+🎓 AR Training System initialized with 4 core modules
+🌍 Multi-jurisdiction support initialized with 4 jurisdictions
+🔐 RBAC Security initialized with 5 role levels
+🔧 Ollama configured for YOUR LOCAL MODELS:
+   📦 Small (7B):  mistral:7b
+   📦 Large (14B): llama2:14b
+   🌐 Base URL:    http://localhost:11434
+⚡ To use your models, make sure Ollama is running with your specific models!
+☁️ AI Router: CLOUD MODE - Using OpenAI, Gemini, Anthropic as primary processors
+🚀 UNIFIED SOPGRID: Initializing complete system integration...
+🗄️ PostgreSQL: Connected and ready for unified operations
+🔐 CREDENTIALS: LLM API keys loaded successfully
+⚡ Fast startup mode enabled
+🔧 Configuration: COMPLIANCE_STRICT=false, NLI_REQUIRED=false
+🛡️ Applying Safety & Logic validation to critical endpoints
+🔐 Applying role-based access control to sensitive routes
+🚀 UNIFIED SOPGRID: Initializing complete system integration...
+✅ UNIFIED SOPGRID: All agents and storage systems integrated
+🤖 Agents: 0 | Storage: PostgreSQL=true
+🔧 Starting Enhanced OS Agent for autonomous system management...
+🔗 STORAGE: Connecting to all storage systems...
+🤖 AGENTS: Initializing specialized agent network...
+👁️ Eyes system registered rotor: rotor-sop_generation-1756965914149-bfbkfvm00
+🆕 New rotor spawned: rotor-sop_generation-1756965914149-bfbkfvm00 with AI services: openai, gemini
+👁️ Eyes system registered rotor: rotor-compliance_check-1756965914149-ze8uzqabt
+🆕 New rotor spawned: rotor-compliance_check-1756965914149-ze8uzqabt with AI services: anthropic, gemini
+👁️ Eyes system registered rotor: rotor-document_analysis-1756965914149-asm0tovsf
+🆕 New rotor spawned: rotor-document_analysis-1756965914149-asm0tovsf with AI services: openai, gemini, anthropic
+👁️ Eyes system registered rotor: rotor-troubleshooting-1756965914149-lj52a4nl6
+🆕 New rotor spawned: rotor-troubleshooting-1756965914149-lj52a4nl6 with AI services: openai, gemini
+⚡ Mesh Rotor System initialized with 4 base rotors (fast startup)
+🗄️ OS Agent: Database connection ready for memory offloading
+🤖 Enhanced OS Agent initialized - Monitoring disabled
+🤖 Enhanced OS Agent activated - Autonomous system resource management enabled
+📚 Loading manufacturer manual knowledge into validators...
+📚 Loading manual knowledge into validators...
+  Adding sequence: bearing_repack
+  Adding torque spec: Castle nut initial = 50 ft-lbs
+  Adding torque spec: Castle nut final = 10-15 in-lbs
+  Adding torque spec: Lug nuts = 90-120 ft-lbs
+  Adding torque spec: U-bolts = 65-85 ft-lbs
+  Adding sequence: brake_adjustment
+  Adding torque spec: Brake mounting bolts = 20-25 ft-lbs
+  Adding sequence: wet_bolt_replacement
+  Adding torque spec: Wet bolt nut = 40-50 ft-lbs
+  Adding sequence: filter_cleaning
+📚 Loading comprehensive technical knowledge...
+  Adding electrical procedure: Transfer Switch Installation
+  Adding torque spec: Main lugs (30A) = 25-30 inch-pounds
+  Adding torque spec: Ground lugs = 15-20 inch-pounds
+  Adding torque spec: Control wiring = 7-9 inch-pounds
+  Adding tool_maintenance procedure: Torque Wrench Calibration Verification
+  Adding installation procedure: Threaded Fastener Installation
+  Adding torque spec: Grade 5 bolts (1/4") = 7-9 foot-pounds
+  Adding torque spec: Grade 5 bolts (5/16") = 15-20 foot-pounds
+  Adding torque spec: Stainless steel (1/4") = 5-7 foot-pounds
+✅ Manual knowledge loaded into validators
+✅ Comprehensive technical knowledge loaded - Installation, repair, maintenance, and tool management standards ready
+✅ Manual knowledge loaded - Lippert, Dometic, and other manufacturer specs ready
+📚 Document processing available on-demand
+✅ Background: Document processing will occur on-demand only
+🚀 Auto-SOP Generator initialized with bulk processing
+🤖 Auto-SOP Generator initialized with bulk processing and revision monitoring
+⚖️ Agent Load Balancer initialized with adaptive strategies
+🤖 Technician LLM Chat Interface activated at /api/technician
+1:05:14 AM [express] serving on port 5000
+🚨 Failed to register agents in database: error: password authentication failed for user 'sopgrid_owner'
+    at file:///home/reynolds-lucas/SopGrid/node_modules/@neondatabase/serverless/index.mjs:1345:74
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NeonPreparedQuery.execute (/home/reynolds-lucas/SopGrid/node_modules/src/neon-serverless/session.ts:102:18)
+    at async UnifiedSystemOrchestrator.registerAgentsInDatabase (/home/reynolds-lucas/SopGrid/server/services/unified-system-orchestrator.ts:319:31)
+    at async UnifiedSystemOrchestrator.initializeAgents (/home/reynolds-lucas/SopGrid/server/services/unified-system-orchestrator.ts:304:7)
+    at async UnifiedSystemOrchestrator.initializeSystem (/home/reynolds-lucas/SopGrid/server/services/unified-system-orchestrator.ts:120:7) {
+  length: 76,
+  severity: 'ERROR',
+  code: 'XX000',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined
+}
+✅ AGENTS: All specialized agents initialized and coordinated
+👀 MONITORING: Intelligent monitoring - only on-demand to prevent database bloat
+✅ UNIFIED SOPGRID: System fully integrated and operational
+✅ MongoDB connected successfully
+🗄️ MongoDB storage activated - Primary storage ready
+🔍 Checking certificate paths...
+Testing: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem - exists: true
+🔑 Using MongoDB certificate: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem
+🤖 Starting auto-vectorization service for crawler documents...
+✅ MongoDB connected successfully
+
