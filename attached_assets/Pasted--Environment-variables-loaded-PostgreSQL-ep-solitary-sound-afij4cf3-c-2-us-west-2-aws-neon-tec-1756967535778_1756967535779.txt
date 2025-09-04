@@ -1,0 +1,160 @@
+✅ Environment variables loaded
+🗄️ PostgreSQL: ep-solitary-sound-afij4cf3.c-2.us-west-2.aws.neon.tech
+🔧 Database: neondb
+🚀 Starting SOPGRID...
+
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+🔧 Initializing MongoDB storage...
+🔍 Checking certificate paths...
+Testing: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem - exists: true
+🔑 Using MongoDB certificate: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem
+🔗 Enhanced Evidence Ledger initialized with blockchain integrity
+🎓 AR Training System initialized with 4 core modules
+🌍 Multi-jurisdiction support initialized with 4 jurisdictions
+🔐 RBAC Security initialized with 5 role levels
+🔧 Ollama configured for YOUR LOCAL MODELS:
+   📦 Small (7B):  mistral:7b
+   📦 Large (14B): llama2:14b
+   🌐 Base URL:    http://localhost:11434
+⚡ To use your models, make sure Ollama is running with your specific models!
+☁️ AI Router: CLOUD MODE - Using OpenAI, Gemini, Anthropic as primary processors
+🚀 UNIFIED SOPGRID: Initializing complete system integration...
+🗄️ PostgreSQL: Connected and ready for unified operations
+🔐 CREDENTIALS: LLM API keys loaded successfully
+⚡ Fast startup mode enabled
+🔧 Configuration: COMPLIANCE_STRICT=false, NLI_REQUIRED=false
+🛡️ Applying Safety & Logic validation to critical endpoints
+🔐 Applying role-based access control to sensitive routes
+🚀 UNIFIED SOPGRID: Initializing complete system integration...
+✅ UNIFIED SOPGRID: All agents and storage systems integrated
+🤖 Agents: 0 | Storage: PostgreSQL=true
+🔧 Starting Enhanced OS Agent for autonomous system management...
+🔗 STORAGE: Connecting to all storage systems...
+🔍 Qdrant: Connected for vector search
+🤖 AGENTS: Initializing specialized agent network...
+👁️ Eyes system registered rotor: rotor-sop_generation-1756967433513-vt5njy6af
+🆕 New rotor spawned: rotor-sop_generation-1756967433513-vt5njy6af with AI services: openai, gemini
+👁️ Eyes system registered rotor: rotor-compliance_check-1756967433513-tum2lgbzw
+🆕 New rotor spawned: rotor-compliance_check-1756967433513-tum2lgbzw with AI services: anthropic, gemini
+👁️ Eyes system registered rotor: rotor-document_analysis-1756967433513-b7i33tfh4
+🆕 New rotor spawned: rotor-document_analysis-1756967433513-b7i33tfh4 with AI services: openai, gemini, anthropic
+👁️ Eyes system registered rotor: rotor-troubleshooting-1756967433513-nakpf1i7u
+🆕 New rotor spawned: rotor-troubleshooting-1756967433513-nakpf1i7u with AI services: openai, gemini
+⚡ Mesh Rotor System initialized with 4 base rotors (fast startup)
+🗄️ OS Agent: Database connection ready for memory offloading
+🤖 Enhanced OS Agent initialized - Monitoring disabled
+🤖 Enhanced OS Agent activated - Autonomous system resource management enabled
+📚 Loading manufacturer manual knowledge into validators...
+📚 Loading manual knowledge into validators...
+  Adding sequence: bearing_repack
+  Adding torque spec: Castle nut initial = 50 ft-lbs
+  Adding torque spec: Castle nut final = 10-15 in-lbs
+  Adding torque spec: Lug nuts = 90-120 ft-lbs
+  Adding torque spec: U-bolts = 65-85 ft-lbs
+  Adding sequence: brake_adjustment
+  Adding torque spec: Brake mounting bolts = 20-25 ft-lbs
+  Adding sequence: wet_bolt_replacement
+  Adding torque spec: Wet bolt nut = 40-50 ft-lbs
+  Adding sequence: filter_cleaning
+📚 Loading comprehensive technical knowledge...
+  Adding electrical procedure: Transfer Switch Installation
+  Adding torque spec: Main lugs (30A) = 25-30 inch-pounds
+  Adding torque spec: Ground lugs = 15-20 inch-pounds
+  Adding torque spec: Control wiring = 7-9 inch-pounds
+  Adding tool_maintenance procedure: Torque Wrench Calibration Verification
+  Adding installation procedure: Threaded Fastener Installation
+  Adding torque spec: Grade 5 bolts (1/4") = 7-9 foot-pounds
+  Adding torque spec: Grade 5 bolts (5/16") = 15-20 foot-pounds
+  Adding torque spec: Stainless steel (1/4") = 5-7 foot-pounds
+✅ Manual knowledge loaded into validators
+✅ Comprehensive technical knowledge loaded - Installation, repair, maintenance, and tool management standards ready
+✅ Manual knowledge loaded - Lippert, Dometic, and other manufacturer specs ready
+📚 Document processing available on-demand
+✅ Background: Document processing will occur on-demand only
+🚀 Auto-SOP Generator initialized with bulk processing
+🤖 Auto-SOP Generator initialized with bulk processing and revision monitoring
+⚖️ Agent Load Balancer initialized with adaptive strategies
+🤖 Technician LLM Chat Interface activated at /api/technician
+1:30:33 AM [express] serving on port 5000
+✅ MongoDB connected successfully
+✅ AGENTS: All specialized agents initialized and coordinated
+👀 MONITORING: Intelligent monitoring - only on-demand to prevent database bloat
+✅ UNIFIED SOPGRID: System fully integrated and operational
+🗄️ MongoDB storage activated - Primary storage ready
+🔍 Checking certificate paths...
+Testing: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem - exists: true
+🔑 Using MongoDB certificate: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem
+🤖 Starting auto-vectorization service for crawler documents...
+✅ MongoDB connected successfully
+Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+🚀 Auto-Vectorizer Service started - Processing crawler documents every 10 seconds
+1:30:59 AM [express] GET /api/auth/user 304 in 2ms :: {"id":"1756341735989","username":"Lucas.Reynol…
+💬 Chat request from 1756341735989 (super_admin): lippert sop replace slim rack in-wall slide room motor class A motor home
+📎 With 0 attachments
+🔍 INPUT VALIDATION: Analyzing user request: "lippert sop replace slim rack in-wall slide room motor class A motor home"
+🔍 INPUT VALIDATION: COMPLETE - Missing: 
+✅ INPUT VALIDATION: Complete - Processing with validated input
+🤖 Technician LLM detected intent: {
+  type: 'knowledge_query',
+  entities: { equipment: 'slide', manufacturer: '', model: '', action: '' }
+}
+📚 Knowledge query for: Lippert slide lippert sop replace slim rack in-wall slide room motor class A motor home
+🔍 Searching pre-loaded manuals: Found 1 results
+✅ MongoDB connected successfully
+🔐 Default admin user created
+🔐 Super admin user Lucas.Reynolds created
+🤖 Default agents created in MongoDB
+🔍 Found 0 documents in MongoDB
+⚠️ Qdrant not available - vectors will not persist
+🔍 Vectorizer searching for: "Lippert slide lippert sop replace slim rack in-wall slide room motor class A motor home"
+OpenAI embedding generation failed: AuthenticationError: 401 Incorrect API key provided: sk-proj-********************************************************************************************************************************************************N94A. You can find your API key at https://platform.openai.com/account/api-keys.
+    at Function.generate (/home/reynolds-lucas/SopGrid/node_modules/openai/src/core/error.ts:76:14)
+    at OpenAI.makeStatusError (/home/reynolds-lucas/SopGrid/node_modules/openai/src/client.ts:453:28)
+    at OpenAI.makeRequest (/home/reynolds-lucas/SopGrid/node_modules/openai/src/client.ts:676:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async OpenAIService.generateEmbeddings (/home/reynolds-lucas/SopGrid/server/services/openai-service.ts:29:26)
+    at async Vectorizer.query (/home/reynolds-lucas/SopGrid/server/services/vectorizer.ts:92:29)
+    at async TechnicianLLM.handleKnowledgeQuery (/home/reynolds-lucas/SopGrid/server/services/technician-llm.ts:1140:27)
+    at async TechnicianLLM.processMessage (/home/reynolds-lucas/SopGrid/server/services/technician-llm.ts:126:20)
+    at async <anonymous> (/home/reynolds-lucas/SopGrid/server/routes/technician-chat.ts:77:22) {
+  status: 401,
+  headers: Headers {
+    date: 'Thu, 04 Sep 2025 06:31:49 GMT',
+    'content-type': 'application/json; charset=utf-8',
+    'content-length': '414',
+    connection: 'keep-alive',
+    vary: 'Origin',
+    'x-request-id': 'req_c7c14948e7f94df094ab73c4c6810f1d',
+    'cf-cache-status': 'DYNAMIC',
+    'set-cookie': '__cf_bm=_xblEO_yOh0TyRYssCEJaI_ZdM1o2qHtFOLZ3gsusWc-1756967509-1.0.1.1-1vT1.eIM7JgbeisavCMo1b2UOpuLCeVbIJxyAjNNbKez.IRZRkFPShvKfFPq2m8MVpPEylqkiszWbGDlFwIhh78MwH9d_qB16NRbLCGKfA0; path=/; expires=Thu, 04-Sep-25 07:01:49 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=cwAyzuFoFWIyp62j4qLneSXbWiqHWa0TVoKBiRyO2fY-1756967509811-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+    'x-content-type-options': 'nosniff',
+    server: 'cloudflare',
+    'cf-ray': '979b72376932183a-STL',
+    'alt-svc': 'h3=":443"; ma=86400'
+  },
+  requestID: 'req_c7c14948e7f94df094ab73c4c6810f1d',
+  error: {
+    message: 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************N94A. You can find your API key at https://platform.openai.com/account/api-keys.',
+    type: 'invalid_request_error',
+    param: null,
+    code: 'invalid_api_key'
+  },
+  code: 'invalid_api_key',
+  param: null,
+  type: 'invalid_request_error'
+}
+Chat processing error: Error: Failed to generate embeddings: 401 Incorrect API key provided: sk-proj-********************************************************************************************************************************************************N94A. You can find your API key at https://platform.openai.com/account/api-keys.
+    at OpenAIService.generateEmbeddings (/home/reynolds-lucas/SopGrid/server/services/openai-service.ts:41:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Vectorizer.query (/home/reynolds-lucas/SopGrid/server/services/vectorizer.ts:92:29)
+    at async TechnicianLLM.handleKnowledgeQuery (/home/reynolds-lucas/SopGrid/server/services/technician-llm.ts:1140:27)
+    at async TechnicianLLM.processMessage (/home/reynolds-lucas/SopGrid/server/services/technician-llm.ts:126:20)
+    at async <anonymous> (/home/reynolds-lucas/SopGrid/server/routes/technician-chat.ts:77:22)
+1:31:50 AM [express] POST /api/technician/chat 500 in 3765ms :: {"message":"I encountered an error p…
+
