@@ -1,0 +1,92 @@
+✅ Environment variables loaded
+🗄️ PostgreSQL: ep-solitary-sound-afij4cf3.c-2.us-west-2.aws.neon.tech
+🔧 Database: neondb
+🚀 Starting SOPGRID...
+
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+🔧 Initializing MongoDB storage...
+🔍 Checking certificate paths...
+Testing: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem - exists: true
+🔑 Using MongoDB certificate: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem
+🔗 Enhanced Evidence Ledger initialized with blockchain integrity
+🎓 AR Training System initialized with 4 core modules
+🌍 Multi-jurisdiction support initialized with 4 jurisdictions
+🔐 RBAC Security initialized with 5 role levels
+🔧 Ollama configured for YOUR LOCAL MODELS:
+   📦 Small (7B):  mistral:7b
+   📦 Large (14B): llama2:14b
+   🌐 Base URL:    http://localhost:11434
+⚡ To use your models, make sure Ollama is running with your specific models!
+☁️ AI Router: CLOUD MODE - Using OpenAI, Gemini, Anthropic as primary processors
+🚀 UNIFIED SOPGRID: Initializing complete system integration...
+🗄️ PostgreSQL: Connected and ready for unified operations
+🔐 CREDENTIALS: LLM API keys loaded successfully
+⚡ Fast startup mode enabled
+🔧 Configuration: COMPLIANCE_STRICT=false, NLI_REQUIRED=false
+🛡️ Applying Safety & Logic validation to critical endpoints
+🔐 Applying role-based access control to sensitive routes
+🚀 UNIFIED SOPGRID: Initializing complete system integration...
+✅ UNIFIED SOPGRID: All agents and storage systems integrated
+🤖 Agents: 0 | Storage: PostgreSQL=true
+🔧 Starting Enhanced OS Agent for autonomous system management...
+🔗 STORAGE: Connecting to all storage systems...
+🔍 Qdrant: Connected for vector search
+🤖 AGENTS: Initializing specialized agent network...
+👁️ Eyes system registered rotor: rotor-sop_generation-1756967353854-uxpjcjj26
+🆕 New rotor spawned: rotor-sop_generation-1756967353854-uxpjcjj26 with AI services: openai, gemini
+👁️ Eyes system registered rotor: rotor-compliance_check-1756967353854-p6ud3alvc
+🆕 New rotor spawned: rotor-compliance_check-1756967353854-p6ud3alvc with AI services: anthropic, gemini
+👁️ Eyes system registered rotor: rotor-document_analysis-1756967353854-irffog53x
+🆕 New rotor spawned: rotor-document_analysis-1756967353854-irffog53x with AI services: openai, gemini, anthropic
+👁️ Eyes system registered rotor: rotor-troubleshooting-1756967353854-7g33o60g7
+🆕 New rotor spawned: rotor-troubleshooting-1756967353854-7g33o60g7 with AI services: openai, gemini
+⚡ Mesh Rotor System initialized with 4 base rotors (fast startup)
+🗄️ OS Agent: Database connection ready for memory offloading
+🤖 Enhanced OS Agent initialized - Monitoring disabled
+🤖 Enhanced OS Agent activated - Autonomous system resource management enabled
+📚 Loading manufacturer manual knowledge into validators...
+📚 Loading manual knowledge into validators...
+  Adding sequence: bearing_repack
+  Adding torque spec: Castle nut initial = 50 ft-lbs
+  Adding torque spec: Castle nut final = 10-15 in-lbs
+  Adding torque spec: Lug nuts = 90-120 ft-lbs
+  Adding torque spec: U-bolts = 65-85 ft-lbs
+  Adding sequence: brake_adjustment
+  Adding torque spec: Brake mounting bolts = 20-25 ft-lbs
+  Adding sequence: wet_bolt_replacement
+  Adding torque spec: Wet bolt nut = 40-50 ft-lbs
+  Adding sequence: filter_cleaning
+📚 Loading comprehensive technical knowledge...
+  Adding electrical procedure: Transfer Switch Installation
+  Adding torque spec: Main lugs (30A) = 25-30 inch-pounds
+  Adding torque spec: Ground lugs = 15-20 inch-pounds
+  Adding torque spec: Control wiring = 7-9 inch-pounds
+  Adding tool_maintenance procedure: Torque Wrench Calibration Verification
+  Adding installation procedure: Threaded Fastener Installation
+  Adding torque spec: Grade 5 bolts (1/4") = 7-9 foot-pounds
+  Adding torque spec: Grade 5 bolts (5/16") = 15-20 foot-pounds
+  Adding torque spec: Stainless steel (1/4") = 5-7 foot-pounds
+✅ Manual knowledge loaded into validators
+✅ Comprehensive technical knowledge loaded - Installation, repair, maintenance, and tool management standards ready
+✅ Manual knowledge loaded - Lippert, Dometic, and other manufacturer specs ready
+📚 Document processing available on-demand
+✅ Background: Document processing will occur on-demand only
+🚀 Auto-SOP Generator initialized with bulk processing
+🤖 Auto-SOP Generator initialized with bulk processing and revision monitoring
+⚖️ Agent Load Balancer initialized with adaptive strategies
+🤖 Technician LLM Chat Interface activated at /api/technician
+1:29:14 AM [express] serving on port 5000
+✅ MongoDB connected successfully
+🗄️ MongoDB storage activated - Primary storage ready
+✅ AGENTS: All specialized agents initialized and coordinated
+👀 MONITORING: Intelligent monitoring - only on-demand to prevent database bloat
+✅ UNIFIED SOPGRID: System fully integrated and operational
+🔍 Checking certificate paths...
+Testing: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem - exists: true
+🔑 Using MongoDB certificate: /home/reynolds-lucas/SopGrid/server/certs/mongodb-latest.pem
+🤖 Starting auto-vectorization service for crawler documents...
+✅ MongoDB connected successfully
+
