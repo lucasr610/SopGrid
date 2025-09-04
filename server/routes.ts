@@ -31,6 +31,7 @@ import { z } from "zod";
 import * as fs from 'fs';
 import * as path from 'path';
 import osAgentRouter from './routes/os-agent.js';
+import manualUploadRouter from './routes/manual-upload.js';
 import { osAgent } from './services/os-agent';
 import { unifiedSystemOrchestrator } from './services/unified-system-orchestrator';
 import { inputValidationService } from './services/input-validation-service';
@@ -82,6 +83,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
   
   // OS Agent Routes - Process management and monitoring
   app.use('/api/os/agent', osAgentRouter);
+  
+  // Manual Upload Routes - Local file storage and vectorization
+  app.use('/api/manuals', manualUploadRouter);
   
   // Start OS Agent if enabled
   // Initialize Unified SOPGRID System 

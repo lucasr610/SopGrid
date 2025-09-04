@@ -1,0 +1,215 @@
+You can keep MongoDB + Qdrant and drop Replit without losing features. Do this.
+
+# 1) Targets
+
+* Primary DB: MongoDB.
+* Vector DB: Qdrant.
+* Embeddings: Ollama (local) first, OpenAI/Gemini fallback if keys exist.
+* Manual files: save to `MANUALS_DIR` on local disk (default `~/SopGrid/manuals`).
+* Remove all Replit plugins and HTML banners. Leave embedded secrets as-is.
+
+# 2) .env (add, do not scrub your existing secrets)
+
+```
+DB_MODE=MONGO
+MONGO_URI=mongodb://localhost:27017/sopgrid
+QDRANT_URL=http://localhost:6333
+EMBEDDINGS_PROVIDER=ollama   # ollama|openai|gemini
+OLLAMA_URL=http://localhost:11434
+MANUALS_DIR=~/SopGrid/manuals
+```
+
+# 3) docker-compose.yml (services you need locally)
+
+```yaml
+services:
+  mongo:
+    image: mongo:7
+    ports: [ "27017:27017" ]
+    volumes: [ "mongo_data:/data/db" ]
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports: [ "6333:6333", "6334:6334" ]
+    volumes: [ "qdrant_data:/qdrant/storage" ]
+
+volumes: { mongo_data: {}, qdrant_data: {} }
+```
+
+# 4) Remove Replit-only code
+
+* `package.json` → delete devDeps:
+
+  * `@replit/vite-plugin-cartographer`
+  * `@replit/vite-plugin-runtime-error-modal`
+* `vite.config.ts` → remove imports/usages of those plugins.
+* `client/index.html` → remove any Replit banner `<script>`.
+
+# 5) Mongo connection must allow local without TLS
+
+In `server/services/mongodb-storage.ts` (or your Mongo client file), gate TLS by cert presence:
+
+```ts
+import { MongoClient } from "mongodb";
+import fs from "fs";
+
+const uri = process.env.MONGO_URI!;
+const hasCert = process.env.MONGO_TLS_CA && fs.existsSync(process.env.MONGO_TLS_CA);
+const client = new MongoClient(uri, hasCert ? {
+  tls: true,
+  tlsCAFile: process.env.MONGO_TLS_CA,
+} : {});
+export const mongo = client.db("sopgrid");
+```
+
+# 6) Qdrant client wiring
+
+`server/services/vector/qdrant-client.ts`:
+
+```ts
+import { QdrantClient } from "@qdrant/js-client-rest";
+export const qdrant = new QdrantClient({ url: process.env.QDRANT_URL || "http://localhost:6333" });
+export const COLLECTION = "manual_chunks_v1";
+```
+
+# 7) Embeddings switch
+
+`server/services/embeddings.ts`:
+
+```ts
+import fetch from "node-fetch";
+
+export async function embed(texts: string[]): Promise<number[][]> {
+  const prov = process.env.EMBEDDINGS_PROVIDER || "ollama";
+  if (prov === "ollama") {
+    const r = await fetch((process.env.OLLAMA_URL||"http://localhost:11434")+"/api/embeddings",{
+      method:"POST",
+      headers:{ "Content-Type":"application/json" },
+      body: JSON.stringify({ model:"nomic-embed-text", input:texts })
+    });
+    const j:any = await r.json();
+    return j.embeddings;
+  }
+  if (prov === "openai") { /* call OpenAI embeddings */ }
+  if (prov === "gemini") { /* call Gemini embeddings */ }
+  throw new Error("No embeddings provider");
+}
+```
+
+# 8) Manual file storage to top directory
+
+`server/services/manuals-store.ts`:
+
+```ts
+import fs from "fs"; import os from "os"; import path from "path";
+const home = os.homedir();
+const root = (process.env.MANUALS_DIR || path.join(home,"SopGrid","manuals")).replace(/^~\//, home + "/");
+fs.mkdirSync(root, { recursive:true });
+
+export function manualPath(rel: string){ return path.join(root, rel); }
+export function saveManual(filename: string, buf: Buffer){
+  const p = manualPath(filename);
+  fs.mkdirSync(path.dirname(p), { recursive:true });
+  fs.writeFileSync(p, buf);
+  return p;
+}
+```
+
+Express route (example):
+
+```ts
+import multer from "multer"; import { saveManual } from "../services/manuals-store";
+import { mongo } from "../services/mongodb-storage"; import { upsertVectors } from "../services/vector/ingest";
+
+const upload = multer();
+app.post("/api/manuals/upload", upload.single("file"), async (req,res)=>{
+  const file = req.file; if(!file) return res.status(400).send("no file");
+  const savedPath = saveManual(file.originalname, file.buffer);
+  const meta = { filename:file.originalname, path:savedPath, size:file.size, uploadedAt:new Date() };
+  await mongo.collection("manuals").insertOne(meta);
+
+  // optional: parse+chunk+embed+upsert
+  const chunks = await chunkPdf(savedPath);            // your existing chunker
+  await upsertVectors(chunks, meta);                   // defined below
+  res.json({ ok:true, savedPath, chunks: chunks.length });
+});
+```
+
+Vector upsert:
+
+```ts
+import { qdrant, COLLECTION } from "./qdrant-client";
+import { embed } from "../embeddings";
+
+export async function upsertVectors(chunks: {id:string,text:string}[], meta:any){
+  const vectors = await embed(chunks.map(c=>c.text));
+  await qdrant.upsert(COLLECTION, {
+    points: chunks.map((c,i)=>({
+      id: c.id,
+      vector: vectors[i],
+      payload: { filename: meta.filename, path: meta.path, uploadedAt: meta.uploadedAt, text: c.text }
+    }))
+  });
+}
+```
+
+# 9) Qdrant collection init
+
+Run once:
+
+```bash
+curl -s -X PUT "http://localhost:6333/collections/manual_chunks_v1" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "vectors": { "size": 768, "distance": "Cosine" },
+    "optimizers_config": { "default_segment_number": 2 }
+  }'
+```
+
+Adjust `size` to your embedding dimensionality (`nomic-embed-text` is 768).
+
+# 10) Start stack
+
+```bash
+docker compose up -d mongo qdrant
+npm ci
+npm run dev      # or: npm run build && npm run start
+```
+
+# 11) Smoke tests
+
+* Upload a PDF:
+
+```bash
+curl -F "file=@/path/to/manual.pdf" http://localhost:5000/api/manuals/upload
+```
+
+* Verify file exists: `ls -lh ~/SopGrid/manuals`
+* Verify Mongo record:
+
+```bash
+mongosh "mongodb://localhost:27017/sopgrid" --eval 'db.manuals.find().limit(3).pretty()'
+```
+
+* Verify Qdrant points:
+
+```bash
+curl -s "http://localhost:6333/collections/manual_chunks_v1/points/count" -H "Content-Type: application/json" -d '{"exact":true}'
+```
+
+* Test search:
+
+```bash
+curl -s "http://localhost:6333/collections/manual_chunks_v1/points/search" \
+ -H "Content-Type: application/json" \
+ -d '{ "vector": [0,0, ... 768 dims ...], "limit": 5 }'
+```
+
+Or wire your existing semantic search endpoint to call `embed([query])` then Qdrant `search`.
+
+# 12) Keep parity with Replit features
+
+* Retain your AI router. Do not remove OpenAI/Gemini code paths. Only change defaults to local.
+* Keep any admin bypass and dev banners you added. Only remove Replit-specific Vite plugins and HTML scripts.
+
+That’s the clean cut: Mongo for data, Qdrant for vectors, local disk for manuals, no Replit code, same capabilities.

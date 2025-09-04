@@ -18,18 +18,21 @@ export class MongoStorage implements IStorage {
 
   constructor(uri: string, dbName: string = 'sopgrid') {
     
-    // Configure connection options for X.509 authentication
+    // Configure connection options
     const connectionOptions: any = {
       retryWrites: true,
       w: 'majority'
     };
     
-    // Add TLS configuration with X.509 certificate for Atlas
-    if (uri.includes('mongodb+srv://')) {
+    // Only add TLS configuration if using Atlas or if cert exists
+    const isAtlas = uri.includes('mongodb+srv://') || uri.includes('mongodb.net');
+    const tlsCert = process.env.MONGO_TLS_CA;
+    
+    if (isAtlas || (tlsCert && fs.existsSync(tlsCert))) {
       try {
         
         // Try multiple certificate paths in order of preference
-        const certPaths = [
+        const certPaths = tlsCert ? [tlsCert] : [
           path.join(process.cwd(), 'server/certs/mongodb-latest.pem'),
           path.join(process.cwd(), 'server/certs/mongodb-x509-cert.pem'),
           path.join(process.cwd(), 'server/certs/mongodb-cert.pem'),
@@ -56,14 +59,16 @@ export class MongoStorage implements IStorage {
           connectionOptions.authMechanism = 'MONGODB-X509';
           connectionOptions.tlsAllowInvalidCertificates = false;
           connectionOptions.tlsAllowInvalidHostnames = false;
-        } else {
+        } else if (isAtlas) {
           console.log('⚠️ No MongoDB certificate found, using TLS without client cert');
           connectionOptions.tls = true;
         }
       } catch (err) {
         console.log('⚠️ Certificate configuration error:', err.message);
-        connectionOptions.tls = true;
+        if (isAtlas) connectionOptions.tls = true;
       }
+    } else {
+      console.log('🏠 Using local MongoDB without TLS');
     }
     
     this.client = new MongoClient(uri, connectionOptions);
