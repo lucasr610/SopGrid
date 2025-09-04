@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  sopgrid:
+    build: .
+    ports:
+      - "${PORT:-5000}:5000"
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - PORT=${PORT:-5000}
+      - DATABASE_URL=${DATABASE_URL}
+      - PGPASSWORD=${PGPASSWORD}
+      - PGUSER=${PGUSER}
+      - PGDATABASE=${PGDATABASE}
+      - PGHOST=${PGHOST}
+      - PGPORT=${PGPORT}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - RVPARTFINDER_COMPANY_ID=${RVPARTFINDER_COMPANY_ID}
+      - RVPARTFINDER_PIN=${RVPARTFINDER_PIN}
+      - RVPARTFINDER_USER_ID=${RVPARTFINDER_USER_ID}
+      - QDRANT_URL=${QDRANT_URL}
+      - QDRANT_API_KEY=${QDRANT_API_KEY}
+      - MONGO_URI=${MONGO_URI}
+      - SESSION_SECRET=${SESSION_SECRET}
+    volumes:
+      - sopgrid_data:/app/data
+      - sopgrid_uploads:/app/uploads
+    restart: unless-stopped
+    networks:
+      - sopgrid_network
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=${PGUSER:-sopgrid}
+      - POSTGRES_PASSWORD=${PGPASSWORD:-sopgrid_password}
+      - POSTGRES_DB=${PGDATABASE:-sopgrid_db}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "${PGPORT:-5432}:5432"
+    restart: unless-stopped
+    networks:
+      - sopgrid_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${PGUSER:-sopgrid}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  sopgrid_data:
+  sopgrid_uploads:
+  postgres_data:
+
+networks:
+  sopgrid_network:
+    driver: bridge

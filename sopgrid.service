@@ -1,0 +1,36 @@
+[Unit]
+Description=SOPGRID Cognitive OS Service
+Documentation=https://github.com/yourusername/sopgrid
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=sopgrid
+Group=sopgrid
+WorkingDirectory=/opt/sopgrid
+ExecStartPre=/usr/bin/npm ci --only=production
+ExecStart=/usr/bin/node dist/index.js
+Restart=always
+RestartSec=10
+
+# Environment file containing all configuration
+EnvironmentFile=/opt/sopgrid/.env
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/sopgrid/data /opt/sopgrid/uploads
+
+# Resource limits
+LimitNOFILE=65536
+LimitNPROC=4096
+
+# Logging
+StandardOutput=append:/var/log/sopgrid/sopgrid.log
+StandardError=append:/var/log/sopgrid/error.log
+
+[Install]
+WantedBy=multi-user.target
