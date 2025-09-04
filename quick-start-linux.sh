@@ -1,0 +1,59 @@
+#!/bin/bash
+echo "================================================================"
+echo "           SOPGRID COMPLETE SYSTEM - LINUX"
+echo "================================================================"
+echo ""
+echo "This package includes EVERYTHING:"
+echo "  - All source code"
+echo "  - All 700MB+ of dependencies (pre-installed)"
+echo "  - All MongoDB certificates"
+echo "  - All API keys configured"
+echo ""
+echo "SETTING UP AND RUNNING..."
+echo ""
+
+# Create environment file
+echo "Creating configuration..."
+cat > .env << 'EOF'
+# Database Configuration
+DATABASE_URL=postgresql://neondb_owner:npg_HfnGDKdsO2z6@ep-solitary-sound-afij4cf3.c-2.us-west-2.aws.neon.tech/neondb?sslmode=require
+PGPASSWORD=npg_HfnGDKdsO2z6
+PGUSER=neondb_owner
+PGDATABASE=neondb
+PGHOST=ep-solitary-sound-afij4cf3.c-2.us-west-2.aws.neon.tech
+PGPORT=5432
+
+# API Keys
+OPENAI_API_KEY=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
+ANTHROPIC_API_KEY=sk-ant-api03-JQS1uo1sT9D-y5JJGfBN8u0FCqy5HgqVj1PmHgJDxcaKjlYY7rWqOOK3jm10EQiVOJZdaUlvCKGRNhL3oC0F-Q
+GEMINI_API_KEY=AIzaSyAUSHeXj8oAOOJo-2YBDQxOOY6xpR5fGjA
+
+# RV Part Finder
+RVPARTFINDER_COMPANY_ID=4917
+RVPARTFINDER_PIN=2244
+RVPARTFINDER_USER_ID=PARTS
+
+# Qdrant
+QDRANT_URL=https://7d13f888-6a05-45a2-b770-40bd1edd67ba.eu-west-2-0.aws.cloud.qdrant.io:6333
+QDRANT_API_KEY=m0yP0yk52H3fUqLcNbjRXLb7gzQOzJQs7TbvJ0wnTCqP4RTCqKe5vQ
+
+# MongoDB
+MONGO_URI=mongodb+srv://lucasreynoldssopgrid:dV5WlNZ8pQPjzYGE@sopgrid.xndbx.mongodb.net/?retryWrites=true&w=majority&appName=sopgrid&tlsAllowInvalidCertificates=true&tlsAllowInvalidHostnames=true&tls=true&tlsCAFile=./server/certs/mongodb-latest.pem
+MONGODB_URI=mongodb+srv://lucasreynoldssopgrid:dV5WlNZ8pQPjzYGE@sopgrid.xndbx.mongodb.net/?retryWrites=true&w=majority&appName=sopgrid&tlsAllowInvalidCertificates=true&tlsAllowInvalidHostnames=true&tls=true&tlsCAFile=./server/certs/mongodb-latest.pem
+
+# Server
+PORT=5000
+NODE_ENV=development
+SESSION_SECRET=sopgrid-secure-session-secret-2024-testing-only
+DISABLE_REPLIT_PLUGINS=true
+OS_AGENT_ENABLED=true
+EOF
+
+echo ""
+echo "================================================================"
+echo "SOPGRID is starting at http://localhost:5000"
+echo "================================================================"
+echo ""
+
+# Start the application
+npm run dev
