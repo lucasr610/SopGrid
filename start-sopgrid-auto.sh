@@ -1,16 +1,16 @@
 #!/bin/bash
-# SOPGRID Auto-Start Script with Working PostgreSQL
+# SOPGRID Auto-Start Script with Auto-Generated PostgreSQL
 # Auto-connects to all required services
 
 cd ~/SopGrid
 
-# Export all environment variables
-export DATABASE_URL="postgresql://neondb_owner:npg_HfnGDKdsO2z6@ep-solitary-sound-afij4cf3.c-2.us-west-2.aws.neon.tech/neondb?sslmode=require"
-export PGPASSWORD="npg_HfnGDKdsO2z6"
-export PGUSER="neondb_owner"
-export PGDATABASE="neondb"
-export PGHOST="ep-solitary-sound-afij4cf3.c-2.us-west-2.aws.neon.tech"
-export PGPORT="5432"
+# Auto-fetch PostgreSQL credentials from environment
+export DATABASE_URL="$DATABASE_URL"
+export PGPASSWORD="$PGPASSWORD"
+export PGUSER="$PGUSER"
+export PGDATABASE="$PGDATABASE"
+export PGHOST="$PGHOST"
+export PGPORT="$PGPORT"
 export OPENAI_API_KEY="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"
 export ANTHROPIC_API_KEY="sk-ant-api03-JQS1uo1sT9D-y5JJGfBN8u0FCqy5HgqVj1PmHgJDxcaKjlYY7rWqOOK3jm10EQiVOJZdaUlvCKGRNhL3oC0F-Q"
 export GEMINI_API_KEY="AIzaSyAUSHeXj8oAOOJo-2YBDQxOOY6xpR5fGjA"
